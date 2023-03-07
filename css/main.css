@@ -1,0 +1,543 @@
+@import url("https://fonts.googleapis.com/css2?family=Passions+Conflict&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;400;600;900&display=swap");
+* {
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 300;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+* a {
+  color: #282828;
+  text-decoration: none;
+}
+
+.nav-section {
+  align-items: center;
+  display: flex;
+  height: 20vh;
+  justify-content: center;
+}
+.nav-section .nav {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.nav-section .nav #nav-check {
+  display: none;
+}
+.nav-section .nav .nav-btn {
+  display: none;
+}
+.nav-section .nav .nav-header .nav-title {
+  font-family: "Passions Conflict", cursive;
+  font-size: 6rem;
+  font-weight: 500;
+}
+.nav-section .nav ul {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  line-height: 1.5rem;
+  width: 50vw;
+}
+.nav-section .nav ul li {
+  font-size: 0.8rem;
+  letter-spacing: 0.1rem;
+  margin: 0 1rem;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+.nav-section .nav ul li :hover {
+  border-bottom: 5px solid #f9d9ee;
+}
+.nav-section .nav ul li .active {
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+@media (max-width: 600px) {
+  .nav-section {
+    height: 15vh !important;
+  }
+  .nav-section .nav .nav-header .nav-title {
+    font-size: 4rem !important;
+  }
+  .nav-section .nav .nav-btn {
+    display: inline-block !important;
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: 99;
+  }
+  .nav-section .nav .nav-btn label {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    padding: 10px;
+    cursor: pointer;
+  }
+  .nav-section .nav .nav-btn label span {
+    display: block;
+    width: 26px;
+    height: 10px;
+    border-bottom: 2px solid black;
+  }
+  .nav-section .nav #nav-check:checked ~ .nav-btn > label {
+    background-color: #ffffff;
+  }
+  .nav-section .nav #nav-check:not(:checked) ~ .nav-links {
+    height: 0px;
+  }
+  .nav-section .nav #nav-check:checked ~ .nav-links {
+    height: -moz-fit-content;
+    height: fit-content;
+    overflow-y: auto;
+    padding: 5rem 0;
+  }
+  .nav-section .nav .nav-links {
+    position: absolute;
+    justify-content: start !important;
+    flex-direction: column;
+    gap: 20px;
+    width: 100vw !important;
+    height: 0px;
+    transition: all 0.3s ease-in;
+    overflow-y: hidden;
+    top: 0px;
+    left: 0px;
+    background: #ffffff;
+    box-shadow: 0px 8px 10px rgba(40, 40, 40, 0.5098039216);
+  }
+  .nav-section .nav .nav-links li a {
+    display: block;
+    width: 100%;
+    color: #282828 !important;
+  }
+}
+.heading-section {
+  align-items: center;
+  border-top: none;
+  display: flex;
+  justify-content: center;
+  margin: 0 3rem 3rem;
+}
+.heading-section .main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: url("../img/background.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  height: 60vh;
+  width: 80vw;
+}
+.heading-section .main .inner-content {
+  max-width: 80vw;
+  padding: 1rem;
+}
+.heading-section .main .inner-content h1 {
+  color: white !important;
+  font-size: 7rem;
+  font-weight: 100;
+  line-height: 4rem;
+  /* reduce size to remove gap between text */
+  margin: 0px;
+}
+.heading-section .main .inner-content h1 span {
+  font-family: "Passions Conflict", cursive;
+  padding: 0.5rem 0;
+}
+.heading-section .main .inner-content .rsvp-button {
+  display: flex;
+  justify-content: center;
+}
+.heading-section .main .inner-content .rsvp-button a button {
+  border: 2px solid white;
+  padding: 1rem;
+  background: rgba(255, 255, 255, 0.2196078431);
+  color: white;
+  margin: 2rem;
+  cursor: pointer;
+  width: 20vw;
+}
+.heading-section .main .inner-content .rsvp-button a :hover {
+  background: #f9d9ee;
+  border: 2px solid #f9d9ee;
+  transition: 0.3s ease-in-out;
+  color: #a6277d;
+}
+
+@media (max-width: 600px) {
+  .heading-section {
+    margin: 0;
+  }
+  .heading-section .main {
+    width: 100vw;
+  }
+  .heading-section .main .inner-content h1 {
+    font-size: 4rem !important;
+  }
+}
+.countdown {
+  align-items: center;
+  display: flex;
+  height: 15vh;
+  justify-content: center;
+}
+.countdown .countdown-section {
+  padding: 1rem;
+  margin: 1rem;
+}
+
+.block-container {
+  font-size: 4rem;
+  margin: 0 4rem;
+  display: inline-block;
+  line-height: 3rem;
+  text-align: justify;
+  text-transform: uppercase;
+}
+.block-container p {
+  font-weight: 900;
+  color: rgba(148, 148, 148, 0.0980392157);
+}
+.block-container p span {
+  font-weight: 900;
+  color: #f9d9ee;
+}
+.block-container p:after {
+  content: "";
+  display: inline-block;
+  width: 100%;
+}
+
+@media (max-width: 600px) {
+  .block-container {
+    font-size: 1.5rem;
+    line-height: 2rem;
+    margin: 0;
+    padding: 1rem;
+  }
+}
+.when-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #06073f;
+  color: #99b0df;
+}
+.when-section .when-side,
+.when-section .where-side {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 5rem;
+}
+.when-section .when-side .heading-small,
+.when-section .where-side .heading-small {
+  margin: 1rem;
+  font-size: 0.9rem;
+  letter-spacing: 0.1rem;
+  line-height: 2rem;
+}
+.when-section .when-side h3,
+.when-section .where-side h3 {
+  font-size: 2rem;
+  font-family: sans-serif;
+  font-weight: 100;
+  line-height: 2.5rem;
+  margin: 0 0 1rem;
+}
+.when-section .when-side p.para-reg,
+.when-section .where-side p.para-reg {
+  margin-bottom: 1rem;
+  padding: 0 1rem;
+  letter-spacing: 0.1rem;
+}
+.when-section .when-side a,
+.when-section .where-side a {
+  text-decoration: none;
+  color: #99b0df;
+  cursor: pointer;
+  font-size: 0.8rem;
+  letter-spacing: 0.1rem;
+  border-bottom: 1px solid #99b0df;
+  line-height: 2rem;
+  padding: 0.5rem 0;
+}
+
+@media (max-width: 600px) {
+  .when-section {
+    flex-direction: column;
+    padding-bottom: 1rem;
+  }
+  .when-section .when-side,
+  .when-section .where-side {
+    padding: 2rem;
+    text-align: center;
+  }
+}
+.travel-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 4rem 10rem;
+}
+.travel-section .heading-small {
+  margin: 1rem;
+  font-size: 0.9rem;
+  letter-spacing: 0.1rem;
+  line-height: 2rem;
+}
+.travel-section .travel-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.travel-section .travel-content .left-side,
+.travel-section .travel-content .right-side {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.travel-section .travel-content h3 {
+  font-size: 2rem;
+  font-family: sans-serif;
+  font-weight: 100;
+  margin: 0 0 1rem;
+}
+.travel-section .travel-content p.para-reg {
+  margin-bottom: 1rem;
+  padding: 0 1rem;
+  letter-spacing: 0.1rem;
+  text-align: center;
+}
+.travel-section a {
+  text-decoration: none;
+  color: #282828;
+  cursor: pointer;
+  font-size: 0.8rem;
+  letter-spacing: 0.1rem;
+  border-bottom: 1px solid #282828;
+  line-height: 2rem;
+  padding: 0.5rem 0 0;
+}
+
+@media (max-width: 600px) {
+  .travel-section {
+    padding: 2rem 2rem 3rem;
+  }
+  .travel-section .travel-content {
+    flex-direction: column;
+  }
+}
+.party-section {
+  background: #f9d9ee;
+  color: #c12121;
+  padding: 4rem 10rem;
+  text-align: center;
+}
+.party-section .inner-sect {
+  display: flex;
+  justify-content: center;
+  text-align: left;
+}
+.party-section .inner-sect .title {
+  width: 60vw;
+}
+.party-section .inner-sect .title h2 {
+  font-size: 2rem;
+  font-weight: 100;
+}
+.party-section .inner-sect .party-info {
+  padding: 3rem 4rem;
+}
+.party-section .inner-sect .party-info h3 {
+  font-family: "Passions Conflict", cursive;
+  font-size: 5rem;
+  font-weight: 100;
+  border-bottom: 1px solid #c12121;
+  padding-bottom: 1rem;
+}
+.party-section .inner-sect .party-info p {
+  margin-bottom: 1rem;
+  padding: 1rem;
+  letter-spacing: 0.1rem;
+  line-height: 2rem;
+}
+.party-section a {
+  text-decoration: none;
+  color: #a6277d;
+  cursor: pointer;
+  font-size: 0.8rem;
+  letter-spacing: 0.1rem;
+  border-bottom: 1px solid #a6277d;
+  line-height: 2rem;
+  padding: 0.5rem 0;
+}
+
+@media (max-width: 600px) {
+  .party-section {
+    padding: 2rem 2rem 3rem;
+  }
+  .party-section .inner-sect {
+    flex-direction: column;
+  }
+  .party-section .inner-sect .title h2 {
+    font-size: 1rem;
+  }
+  .party-section .inner-sect .party-info {
+    padding: 1rem 0;
+  }
+  .party-section .inner-sect .party-info h3 {
+    font-size: 3rem;
+  }
+}
+.rsvp {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  color: #282828;
+  padding: 4rem 10rem;
+  text-align: center;
+}
+@media (max-width: 700px) {
+  .rsvp {
+    padding: 2rem 1rem;
+  }
+}
+.rsvp h2 {
+  font-family: "Passions Conflict", cursive;
+  font-size: 5rem;
+  font-weight: 100;
+}
+@media (max-width: 700px) {
+  .rsvp h2 {
+    font-size: 3rem;
+  }
+}
+.rsvp .rsvp-button a button {
+  border: 2px solid #282828;
+  padding: 1rem;
+  background: none;
+  color: #282828;
+  margin: 2rem;
+  cursor: pointer;
+  width: 20vw;
+}
+@media (max-width: 700px) {
+  .rsvp .rsvp-button a button {
+    background: #06073f;
+    border: 2px solid #06073f;
+    color: white;
+    cursor: pointer;
+  }
+}
+.rsvp .rsvp-button a :hover {
+  background: #f9d9ee;
+  border: 2px solid #f9d9ee;
+  transition: 0.3s ease-in-out;
+  color: #a6277d;
+}
+
+.footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #06073f;
+  color: #99b0df;
+  padding: 4rem 10rem;
+}
+
+@media (max-width: 600px) {
+  .footer {
+    padding: 4rem;
+  }
+}
+.response-container {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+.response-container .header-strip {
+  background: #06073f;
+  width: 100vw;
+  height: 15vh;
+}
+.response-container .rsvp-container {
+  background: #99b0df;
+  border-radius: 10px;
+  margin: auto;
+  padding: 2rem;
+  position: relative;
+  transform: translateY(-5vh);
+  text-align: center;
+  width: 40vw;
+}
+.response-container .rsvp-container h2 {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 300;
+  letter-spacing: 0.2rem;
+}
+.response-container .rsvp-container h1 {
+  color: white;
+  font-family: "Passions Conflict", cursive;
+  font-size: 5rem;
+  font-weight: 100;
+  line-height: 3rem;
+  margin-bottom: 1rem;
+}
+.response-container .rsvp-container hr {
+  border: 1px solid white;
+  border-style: dashed;
+  margin: 2rem 0 1rem;
+}
+.response-container .rsvp-container .rsvp-details {
+  display: flex;
+  justify-content: center;
+}
+.response-container .rsvp-container .rsvp-details h3 {
+  font-family: "Passions Conflict", cursive;
+  font-size: 3rem;
+  font-weight: 100;
+}
+.response-container .rsvp-container .rsvp-details div {
+  padding: 1rem;
+}
+.response-container .rsvp-container form {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+.response-container .rsvp-container form input,
+.response-container .rsvp-container form textarea,
+.response-container .rsvp-container form select {
+  border: none;
+  background: white;
+  font-family: "Montserrat", sans-serif;
+  padding: 1rem 0.6rem;
+  margin: 0.5rem 0;
+  width: 100%;
+}
+.response-container .rsvp-container form p {
+  font-family: "Montserrat", sans-serif;
+  padding: 0.6rem;
+  margin: 0.5rem 0;
+}
+.response-container .rsvp-container form button {
+  background: #06073f;
+  border: none;
+  color: white;
+  cursor: pointer;
+  padding: 1rem;
+  margin: 0.5rem 0;
+}/*# sourceMappingURL=main.css.map */

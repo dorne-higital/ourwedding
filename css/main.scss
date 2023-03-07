@@ -1,0 +1,704 @@
+// Main config
+
+@import url('https://fonts.googleapis.com/css2?family=Passions+Conflict&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;400;600;900&display=swap');
+
+$font-main: 'Montserrat', sans-serif;
+$font-cursive: 'Passions Conflict', cursive;
+
+$primary-colour: #282828;
+$base-blue: #99b0df;
+$deep-blue: #06073f;
+$base-pink: #f9d9ee;
+$deep-pink: #a6277d;
+$base-red: #d57878;
+$deep-red: #c12121;
+
+$border-radius: 8px;
+
+// ------------------------------------ CSS Reset
+
+* {
+    box-sizing: border-box;
+    // color: $primary-colour;
+    font-family: $font-main;
+    font-weight: 300;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+
+    a {
+        color: $primary-colour;
+        text-decoration: none;
+    }
+}
+
+// -------------------------------------------------------------------------------
+// ------------------------------------ Homepage ---------------------------------
+// -------------------------------------------------------------------------------
+
+// ------------------------------------ Nav
+
+.nav-section {
+    align-items: center;
+    display: flex;
+    height: 20vh;
+    justify-content: center;
+
+    .nav {
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        #nav-check {
+            display: none;
+        }
+
+        .nav-btn {
+            display: none;
+        }
+
+        .nav-header .nav-title {
+            font-family: $font-cursive;
+            font-size: 6rem;
+            font-weight: 500;
+        }
+
+        ul {
+            align-items: center;
+            display: flex;
+            justify-content: center;
+            line-height: 1.5rem;
+            width: 50vw;
+
+            li {
+                font-size: 0.8rem;
+                letter-spacing: 0.1rem;
+                margin: 0 1rem;
+                text-transform: uppercase;
+                white-space: nowrap;
+
+                :hover {
+                    border-bottom: 5px solid $base-pink;
+                }
+
+                .active {
+                    font-weight: 600;
+                    font-size: 0.9rem;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width:600px) {
+
+    .nav-section {
+        // align-items: start !important;
+        height: 15vh !important;
+
+        .nav {
+
+            .nav-header .nav-title {
+                font-size: 4rem !important;
+            }
+
+            .nav-btn {
+                display: inline-block !important;
+                position: absolute;
+                right: 0;
+                top: 0;
+                z-index: 99;
+
+                label {
+                    display: inline-block;
+                    width: 50px;
+                    height: 50px;
+                    padding: 10px;
+                    cursor: pointer;
+
+                    span {
+                        display: block;
+                        width: 26px;
+                        height: 10px;
+                        border-bottom: 2px solid black;
+                    }
+                }
+            }
+
+            #nav-check:checked~.nav-btn>label {
+                background-color: #ffffff;
+            }
+
+            #nav-check:not(:checked)~.nav-links {
+                height: 0px;
+            }
+
+            #nav-check:checked~.nav-links {
+                height: fit-content;
+                overflow-y: auto;
+                padding: 5rem 0;
+            }
+
+            .nav-links {
+                position: absolute;
+                justify-content: start !important;
+                flex-direction: column;
+                gap: 20px;
+                width: 100vw !important;
+                height: 0px;
+                transition: all 0.3s ease-in;
+                overflow-y: hidden;
+                top: 0px;
+                left: 0px;
+                background: #ffffff;
+                box-shadow: 0px 8px 10px #28282882;
+
+                li {
+
+                    a {
+                        display: block;
+                        width: 100%;
+                        color: $primary-colour !important;
+                    }
+                }
+
+            }
+        }
+    }
+
+
+}
+
+// ------------------------------------ Header
+
+.heading-section {
+    align-items: center;
+    border-top: none;
+    display: flex;
+    justify-content: center;
+    margin: 0 3rem 3rem;
+
+    .main {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-image: url('../img/background.jpg');
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-position: center;
+        height: 60vh;
+        width: 80vw;
+
+        .inner-content {
+            max-width: 80vw;
+            padding: 1rem;
+
+            h1 {
+                color: white !important;
+                font-size: 7rem;
+                font-weight: 100;
+                line-height: 4rem;
+                /* reduce size to remove gap between text */
+                margin: 0px;
+            }
+
+            h1 span {
+                font-family: 'Passions Conflict', cursive;
+                padding: 0.5rem 0;
+            }
+
+            .rsvp-button {
+                display: flex;
+                justify-content: center;
+
+                a {
+                    button {
+                        border: 2px solid white;
+                        padding: 1rem;
+                        background: #ffffff38;
+                        color: white;
+                        margin: 2rem;
+                        cursor: pointer;
+                        width: 20vw;
+                    }
+
+                    :hover {
+                        background: $base-pink;
+                        border: 2px solid $base-pink;
+                        transition: 0.3s ease-in-out;
+                        color: $deep-pink;
+                    }
+                }
+
+
+            }
+        }
+
+    }
+
+}
+
+@media (max-width:600px) {
+    .heading-section {
+        margin: 0;
+
+        .main {
+            width: 100vw;
+    
+            .inner-content {
+    
+                h1 {
+                    font-size: 4rem !important;
+                }
+            }
+        }
+    }
+}
+
+// ------------------------------------ Countdown
+
+.countdown {
+    align-items: center;
+    display: flex;
+    height: 15vh;
+    justify-content: center;
+
+    .countdown-section {
+        padding: 1rem;
+        margin: 1rem;
+    }
+
+}
+
+// ------------------------------------ Block section
+
+.block-container {
+    font-size: 4rem;
+    margin: 0 4rem;
+    display: inline-block;
+    line-height: 3rem;
+    text-align: justify;
+    text-transform: uppercase;
+
+    p {
+        font-weight: 900;
+        color: #94949419;
+
+        span {
+            font-weight: 900;
+            color: $base-pink;
+        }
+    }
+
+    p:after {
+        content: '';
+        display: inline-block;
+        width: 100%;
+    }
+
+
+}
+
+@media (max-width:600px) {
+    .block-container {
+        font-size: 1.5rem;
+        line-height: 2rem;
+        margin: 0;
+        padding: 1rem;
+    }
+}
+
+// ------------------------------------ When & where
+
+.when-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: $deep-blue;
+    color: $base-blue;
+
+    .when-side,
+    .where-side {
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 5rem;
+
+        .heading-small {
+            margin: 1rem;
+            font-size: 0.9rem;
+            letter-spacing: 0.1rem;
+            line-height: 2rem;
+        }
+
+        h3 {
+            font-size: 2rem;
+            font-family: sans-serif;
+            font-weight: 100;
+            line-height: 2.5rem;
+            margin: 0 0 1rem;
+        }
+
+        p.para-reg {
+            margin-bottom: 1rem;
+            padding: 0 1rem;
+            letter-spacing: 0.1rem;
+        }
+
+        a {
+            text-decoration: none;
+            color: $base-blue;
+            cursor: pointer;
+            font-size: 0.8rem;
+            letter-spacing: 0.1rem;
+            border-bottom: 1px solid $base-blue;
+            line-height: 2rem;
+            padding: 0.5rem 0;
+        }
+
+    }
+}
+
+@media (max-width:600px) {
+    .when-section {
+        flex-direction: column;
+        padding-bottom: 1rem;
+
+        .when-side,
+        .where-side {
+            padding: 2rem;
+            text-align: center;
+        }
+    }
+}
+
+// ------------------------------------ Travel
+
+.travel-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 4rem 10rem;
+
+    .heading-small {
+        margin: 1rem;
+        font-size: 0.9rem;
+        letter-spacing: 0.1rem;
+        line-height: 2rem;
+    }
+
+    .travel-content {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .left-side,
+        .right-side {
+            align-items: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        h3 {
+            font-size: 2rem;
+            font-family: sans-serif;
+            font-weight: 100;
+            margin: 0 0 1rem;
+        }
+
+        p.para-reg {
+            margin-bottom: 1rem;
+            padding: 0 1rem;
+            letter-spacing: 0.1rem;
+            text-align: center;
+        }
+
+    }
+
+    a {
+        text-decoration: none;
+        color: $primary-colour;
+        cursor: pointer;
+        font-size: 0.8rem;
+        letter-spacing: 0.1rem;
+        border-bottom: 1px solid $primary-colour;
+        line-height: 2rem;
+        padding: 0.5rem 0 0;
+    }
+}
+
+@media (max-width:600px) {
+    .travel-section {
+        padding: 2rem 2rem 3rem;
+
+        .travel-content {
+            flex-direction: column;
+        }
+    }
+}
+
+// ------------------------------------ Party
+
+.party-section {
+    background: $base-pink;
+    color: $deep-red;
+    padding: 4rem 10rem;
+    text-align: center;
+
+    .inner-sect {
+        display: flex;
+        justify-content: center;
+        text-align: left;
+
+        .title {
+            width: 60vw;
+
+            h2 {
+                font-size: 2rem;
+                font-weight: 100;
+            }
+        }
+
+        .party-info {
+            padding: 3rem 4rem;
+
+            h3 {
+                font-family: 'Passions Conflict', cursive;
+                font-size: 5rem;
+                font-weight: 100;
+                border-bottom: 1px solid $deep-red;
+                padding-bottom: 1rem;
+            }
+
+            p {
+                margin-bottom: 1rem;
+                padding: 1rem;
+                letter-spacing: 0.1rem;
+                line-height: 2rem;
+            }
+        }
+    }
+
+    a {
+        text-decoration: none;
+        color: $deep-pink;
+        cursor: pointer;
+        font-size: 0.8rem;
+        letter-spacing: 0.1rem;
+        border-bottom: 1px solid $deep-pink;
+        line-height: 2rem;
+        padding: 0.5rem 0;
+    }
+
+}
+
+@media (max-width:600px) {
+    .party-section {
+        padding: 2rem 2rem 3rem;
+
+        .inner-sect {
+            flex-direction: column;
+
+            .title h2 {
+                font-size: 1rem;
+            }
+
+            .party-info {
+                padding: 1rem 0;
+
+                h3 {
+                    font-size: 3rem;
+                }
+            }
+        }
+    }
+}
+
+// ------------------------------------ RSVP
+
+.rsvp {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    color: $primary-colour;
+    padding: 4rem 10rem;
+    text-align: center;
+
+    @media (max-width: 700px) {
+        padding: 2rem 1rem;
+    }
+
+    h2 {
+        font-family: 'Passions Conflict', cursive;
+        font-size: 5rem;
+        font-weight: 100;
+
+        @media (max-width: 700px) {
+            font-size: 3rem;
+        }
+    }
+
+    .rsvp-button {
+
+        a {
+            button {
+                border: 2px solid $primary-colour;
+                padding: 1rem;
+                background: none;
+                color: $primary-colour;
+                margin: 2rem;
+                cursor: pointer;
+                width: 20vw;
+
+                @media (max-width: 700px) {
+                    background: $deep-blue;
+                    border: 2px solid $deep-blue;
+                    color: white;
+                    cursor: pointer;
+                }
+            }
+
+            :hover {
+                background: $base-pink;
+                border: 2px solid $base-pink;
+                transition: 0.3s ease-in-out;
+                color: $deep-pink;
+            }
+        }
+
+    }
+
+}
+
+// ------------------------------------ Footer
+
+.footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: $deep-blue;
+    color: $base-blue;
+    padding: 4rem 10rem;
+}
+
+@media (max-width:600px) {
+    .footer {
+        padding: 4rem;
+    }
+}
+
+// -------------------------------------------------------------------------------
+// ------------------------------------ Wedding ----------------------------------
+// -------------------------------------------------------------------------------
+
+// -------------------------------------------------------------------------------
+// ------------------------------------ Story ------------------------------------
+// -------------------------------------------------------------------------------
+
+// -------------------------------------------------------------------------------
+// ------------------------------------ Travel -----------------------------------
+// -------------------------------------------------------------------------------
+
+// -------------------------------------------------------------------------------
+// ------------------------------------ RSVP -------------------------------------
+// -------------------------------------------------------------------------------
+
+.response-container {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+
+    .header-strip {
+        background: $deep-blue;
+        width: 100vw;
+        height: 15vh;
+    }
+
+    .rsvp-container {
+        background: $base-blue;
+        border-radius: 10px;
+        margin: auto;
+        padding: 2rem;
+        position: relative;
+        transform: translateY(-5vh);
+        text-align: center;
+        width: 40vw;
+
+        h2 {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 300;
+            letter-spacing: 0.2rem;
+        }
+
+        h1 {
+            color: white;
+            font-family: 'Passions Conflict', cursive;
+            font-size: 5rem;
+            font-weight: 100;
+            line-height: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        hr {
+            border: 1px solid white;
+            border-style: dashed;
+            margin: 2rem 0 1rem;
+        }
+
+        .rsvp-details {
+            display: flex;
+            justify-content: center;
+
+            h3 {
+                font-family: 'Passions Conflict', cursive;
+                font-size: 3rem;
+                font-weight: 100;
+            }
+
+            div {
+                padding: 1rem;
+            }
+        }
+
+        form {
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+
+            input,
+            textarea,
+            select {
+                border: none;
+                background: white;
+                font-family: 'Montserrat', sans-serif;
+                padding: 1rem 0.6rem;
+                margin: 0.5rem 0;
+                width: 100%;
+            }
+
+            p {
+                font-family: 'Montserrat', sans-serif;
+                padding: 0.6rem;
+                margin: 0.5rem 0;
+            }
+
+            button {
+                background: $deep-blue;
+                border: none;
+                color: white;
+                cursor: pointer;
+                padding: 1rem;
+                margin: 0.5rem 0;
+
+            }
+
+        }
+    }
+}

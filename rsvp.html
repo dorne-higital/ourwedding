@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+    <html lang="en">
+        <head>
+            <meta charset="UTF-8" />
+            <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+            <meta
+                name="viewport"
+                content="width=device-width, initial-scale=1.0"
+            />
+            <title>Our Wedding</title>
+
+            <link rel="stylesheet" href="css/main.css" />
+
+            <script
+                src="https://code.jquery.com/jquery-3.6.3.min.js"
+                integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU="
+                crossorigin="anonymous"
+            ></script>
+            <script src="js/main.js"></script>
+        </head>
+        <body>
+            <!-- Nav section -->
+
+            <div class="nav-section">
+                <nav>
+                    <h1 class="logo">Emma & Daniel</h1>
+                    <ul>
+                        <li>
+                            <a href="index.html">Home</a>
+                        </li>
+                        <li>
+                            <a href="wedding.html">The Wedding</a>
+                        </li>
+                        <li>
+                            <a href="story.html">Our Story</a>
+                        </li>
+                        <li>
+                            <a href="travel.html">Travel & Stay</a>
+                        </li>
+                        <li>
+                            <a href="rsvp.html">RSVP</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+
+            <!-- RSVP section -->
+
+            <div class="response-container">
+                <section class="header-strip"></section>
+                <section class="rsvp-container">
+                    <h2>RSVP</h2>
+                    <h1>for the wedding of</h1>
+                    <h2>Emma & Daniel</h2>
+
+                    <hr />
+
+                    <section class="rsvp-details">
+                        <div class="details">
+                            <h3>when</h3>
+                            <p>Friday, 20th December</p>
+                            <p>2024</p>
+                        </div>
+                        <div class="time-location">
+                            <h3>where</h3>
+                            <p>Broadoaks Country House</p>
+                            <p>Windermere</p>
+                        </div>
+                    </section>
+
+                    <hr />
+
+                    <form>
+                        <input
+                            type="text"
+                            name="name"
+                            placeholder="Name(s) of guest(s)"
+                            required
+                        />
+                        <input
+                            type="phone"
+                            name="phone"
+                            placeholder="Contact Number"
+                            required
+                        />
+                        <select
+                            name="attending"
+                            id="attending"
+                            placeholder="Please choose"
+                            required
+                            onchange = "rsvp()"
+                        >
+                            <option value="" disabled selected>
+                                RSVP here
+                            </option>
+                            <option value="yes">
+                                I would love to come
+                            </option>
+                            <option value="no">
+                                Sadly I can not make it
+                            </option>
+                        </select>
+                        <section id="accepted" class="accepted-section" style="display: none">
+                            <textarea
+                                name="message"
+                                v-model="message"
+                                cols="30"
+                                rows="5"
+                                placeholder="Please mention any dietary requirements you may have"
+                            >
+                            </textarea>
+                            <p>
+                                We would also love for you to have a say on what
+                                music plays to get you on the dancefloor. Please
+                                feel free to suggest 1 or 2 options below:
+                            </p>
+                            <input
+                                type="text"
+                                v-model="songone"
+                                name="songone"
+                                placeholder="Your first song choice"
+                            />
+                            <input
+                                type="text"
+                                v-model="songtwo"
+                                name="songtwo"
+                                placeholder="Your second song choice"
+                            />
+                            <p>
+                                Finally, can you please enter the password found
+                                on your invitation before submitting:
+                            </p>
+                            <input
+                                type="password"
+                                v-model="password"
+                                name="password"
+                                placeholder="Enter password"
+                                required
+                            />
+                        </section>
+
+                        <button type="submit">RSVP</button>
+                    </form>
+                </section>
+            </div>
+
+            <!-- Footer -->
+
+            <section class="footer">
+                <p>Emma & Daniel</p>
+            </section>
+
+            <script>
+                function rsvp() {
+                    const select = document.getElementById('attending');
+                    const accepted = document.getElementById('accepted');
+                    accepted.style.display = attending.value == "yes" ? "block" : "none";
+                }
+                
+            </script>
+        </body>
+    </html>
+</html>
