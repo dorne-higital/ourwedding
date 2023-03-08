@@ -178,6 +178,7 @@
   }
   .heading-section .main {
     width: 100vw;
+    background-attachment: inherit !important;
   }
   .heading-section .main .inner-content h1 {
     font-size: 4rem !important;
