@@ -541,4 +541,11 @@
   cursor: pointer;
   padding: 1rem;
   margin: 0.5rem 0;
+}
+
+@media (max-width: 600px) {
+  .response-container .rsvp-container {
+    border-radius: 5px;
+    width: 90vw;
+  }
 }/*# sourceMappingURL=main.css.map */
