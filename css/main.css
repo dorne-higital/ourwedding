@@ -353,7 +353,7 @@
   text-align: left;
 }
 .party-section .inner-sect .title {
-  width: 60vw;
+  width: 20vw;
 }
 .party-section .inner-sect .title h2 {
   font-size: 2rem;
@@ -392,6 +392,9 @@
   }
   .party-section .inner-sect {
     flex-direction: column;
+  }
+  .party-section .inner-sect .title {
+    width: 50vw;
   }
   .party-section .inner-sect .title h2 {
     font-size: 1rem;
@@ -455,6 +458,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
   background: #06073f;
   color: #99b0df;
   padding: 4rem 10rem;

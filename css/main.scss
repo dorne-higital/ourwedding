@@ -459,7 +459,7 @@ $border-radius: 8px;
         text-align: left;
 
         .title {
-            width: 60vw;
+            width: 20vw;
 
             h2 {
                 font-size: 2rem;
@@ -507,8 +507,12 @@ $border-radius: 8px;
         .inner-sect {
             flex-direction: column;
 
-            .title h2 {
-                font-size: 1rem;
+            .title {
+                width: 50vw;
+                
+                h2 {
+                    font-size: 1rem;
+                }
             }
 
             .party-info {
@@ -585,6 +589,7 @@ $border-radius: 8px;
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
     background: $deep-blue;
     color: $base-blue;
     padding: 4rem 10rem;
