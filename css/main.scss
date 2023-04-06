@@ -269,6 +269,10 @@ $border-radius: 8px;
     font-family: $font-main;
     justify-content: center;
     margin-bottom: 0.5rem;
+
+    @media (max-width:600px) {
+        margin-top: 2rem;
+    }
 }
 
 #countdown {

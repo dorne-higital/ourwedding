@@ -193,6 +193,11 @@
   justify-content: center;
   margin-bottom: 0.5rem;
 }
+@media (max-width: 600px) {
+  .countdown-text {
+    margin-top: 2rem;
+  }
+}
 
 #countdown {
   align-items: center;
