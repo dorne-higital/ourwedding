@@ -185,15 +185,41 @@
     font-size: 4rem !important;
   }
 }
-.countdown {
+.countdown-text {
   align-items: center;
   display: flex;
-  height: 15vh;
+  font-size: 1rem;
+  font-family: "Montserrat", sans-serif;
+  justify-content: center;
+  margin-bottom: 0.5rem;
+}
+
+#countdown {
+  align-items: center;
+  display: flex;
+  height: 10vh;
   justify-content: center;
 }
-.countdown .countdown-section {
-  padding: 1rem;
+#countdown .countdown-section {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   margin: 1rem;
+  padding: 1rem;
+}
+#countdown .countdown-section span {
+  font-size: 2rem;
+}
+
+#end-text {
+  align-items: center;
+  display: flex;
+  font-size: 4rem;
+  font-family: "Passions Conflict", cursive;
+  height: 10vh;
+  justify-content: center;
+  padding-bottom: 3rem;
 }
 
 .block-container {
