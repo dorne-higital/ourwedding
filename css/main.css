@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Passions+Conflict&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;400;600;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Dynalight&display=swap");
 * {
   box-sizing: border-box;
   font-family: "Montserrat", sans-serif;
@@ -11,6 +12,12 @@
 * a {
   color: #282828;
   text-decoration: none;
+}
+
+.header-strip {
+  background: #06073f;
+  width: 100vw;
+  height: 15vh;
 }
 
 .nav-section {
@@ -500,15 +507,154 @@
     padding: 4rem;
   }
 }
-.response-container {
+.story-container {
   display: flex;
   justify-content: center;
   flex-direction: column;
 }
-.response-container .header-strip {
-  background: #06073f;
-  width: 100vw;
-  height: 15vh;
+.story-container .match-container {
+  align-items: center;
+  background: white;
+  border-radius: 1rem;
+  display: flex;
+  flex-direction: row;
+  margin: auto;
+  padding: 2rem;
+  text-align: center;
+  width: 60vw;
+}
+.story-container .match-container .match-story {
+  padding: 1rem;
+}
+.story-container .match-container .match-story h3 {
+  font-family: "Passions Conflict", cursive;
+  font-size: 5rem;
+  margin-bottom: 2rem;
+}
+.story-container .match-container .match-story p {
+  padding: 0.5rem 0;
+  text-align: left;
+}
+.story-container .match-container .match-image img {
+  border-radius: 1rem;
+  max-width: 20rem;
+}
+.story-container .dating-container {
+  align-items: center;
+  background: white;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: row;
+  margin: auto;
+  padding: 2rem;
+  position: relative;
+  transform: translateY(-5vh);
+  text-align: center;
+  width: 60vw;
+}
+.story-container .dating-container .dating-story {
+  padding: 1rem;
+}
+.story-container .dating-container .dating-story h3 {
+  font-family: "Passions Conflict", cursive;
+  font-size: 5rem;
+  margin-bottom: 2rem;
+}
+.story-container .dating-container .dating-story p {
+  padding: 0.5rem 0;
+  text-align: left;
+}
+.story-container .dating-container .dating-image img {
+  border-radius: 1rem;
+  max-height: 30vh;
+  max-width: 20rem;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.story-container .proposal-container {
+  align-items: center;
+  background: white;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  padding: 2rem;
+  position: relative;
+  transform: translateY(-5vh);
+  text-align: center;
+  width: 60vw;
+}
+.story-container .proposal-container .proposal-story {
+  padding: 1rem;
+}
+.story-container .proposal-container .proposal-story h3 {
+  font-family: "Passions Conflict", cursive;
+  font-size: 5rem;
+  margin-bottom: 2rem;
+}
+.story-container .proposal-container .proposal-story p {
+  padding: 0.5rem 0;
+}
+.story-container .proposal-container .proposal-image {
+  max-width: 50vw;
+}
+.story-container .proposal-container .proposal-image img {
+  border-radius: 1rem;
+  max-width: 30vw;
+}
+
+@media (max-width: 600px) {
+  .story-container .match-container,
+  .story-container .dating-container,
+  .story-container .proposal-container {
+    border-radius: 5px;
+    flex-direction: column;
+    padding: 0rem;
+    width: 100vw;
+  }
+  .story-container .match-container .match-story h3,
+  .story-container .match-container .dating-story h3,
+  .story-container .match-container .proposal-story h3,
+  .story-container .dating-container .match-story h3,
+  .story-container .dating-container .dating-story h3,
+  .story-container .dating-container .proposal-story h3,
+  .story-container .proposal-container .match-story h3,
+  .story-container .proposal-container .dating-story h3,
+  .story-container .proposal-container .proposal-story h3 {
+    font-size: 3.5rem;
+  }
+  .story-container .match-container .match-image,
+  .story-container .match-container .dating-image,
+  .story-container .match-container .proposal-image,
+  .story-container .dating-container .match-image,
+  .story-container .dating-container .dating-image,
+  .story-container .dating-container .proposal-image,
+  .story-container .proposal-container .match-image,
+  .story-container .proposal-container .dating-image,
+  .story-container .proposal-container .proposal-image {
+    max-width: 100vw;
+  }
+  .story-container .match-container .match-image img,
+  .story-container .match-container .dating-image img,
+  .story-container .match-container .proposal-image img,
+  .story-container .dating-container .match-image img,
+  .story-container .dating-container .dating-image img,
+  .story-container .dating-container .proposal-image img,
+  .story-container .proposal-container .match-image img,
+  .story-container .proposal-container .dating-image img,
+  .story-container .proposal-container .proposal-image img {
+    border-radius: 0;
+    max-height: 100%;
+    max-width: 100vw;
+  }
+  .story-container .dating-container:nth-of-type(odd) {
+    flex-direction: column-reverse;
+  }
+}
+.response-container {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
 }
 .response-container .rsvp-container {
   background: #99b0df;
