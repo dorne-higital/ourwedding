@@ -14,6 +14,21 @@
             crossorigin="anonymous"
         ></script>
         <script src="js/main.js"></script>
+
+        <!-- Google tag (gtag.js) -->
+        <script
+            async
+            src="https://www.googletagmanager.com/gtag/js?id=G-8MM8EMNN81"
+        ></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag() {
+                dataLayer.push(arguments);
+            }
+            gtag("js", new Date());
+
+            gtag("config", "G-8MM8EMNN81");
+        </script>
     </head>
     <body>
         <!-- Nav section -->
@@ -70,9 +85,7 @@
 
         <!-- <div id="countdown"></div> -->
 
-        <p class="countdown-text">
-            How long until we say "I do"
-        </p>
+        <p class="countdown-text">How long until we say "I do"</p>
         <div id="countdown">
             <div class="countdown-section">
                 <span id="years"></span>
@@ -216,7 +229,6 @@
             <p>Emma & Daniel</p>
             <br />
             <p>Please check back for regular updates</p>
-
         </section>
 
         <script></script>
