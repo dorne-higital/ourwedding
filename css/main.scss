@@ -423,6 +423,30 @@ $border-radius: 8px;
 
 // ------------------------------------ Travel
 
+.travel-section-home {
+    padding: 4rem 10rem;
+    text-align: center;
+
+    @media (max-width:600px) {
+        padding: 1rem;
+    }
+
+    .travel-content {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+
+        @media (max-width:600px) {
+            flex-direction: column;
+        }
+
+        .left-side,
+        .right-side {
+            flex-grow: 1;
+        }
+    }
+}
+
 .travel-section {
     background: linear-gradient(to bottom, white 50%, $base-pink 50%);
     display: flex;

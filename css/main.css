@@ -357,6 +357,30 @@
     text-align: center;
   }
 }
+.travel-section-home {
+  padding: 4rem 10rem;
+  text-align: center;
+}
+@media (max-width: 600px) {
+  .travel-section-home {
+    padding: 1rem;
+  }
+}
+.travel-section-home .travel-content {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+@media (max-width: 600px) {
+  .travel-section-home .travel-content {
+    flex-direction: column;
+  }
+}
+.travel-section-home .travel-content .left-side,
+.travel-section-home .travel-content .right-side {
+  flex-grow: 1;
+}
+
 .travel-section {
   background: linear-gradient(to bottom, white 50%, #f9d9ee 50%);
   display: flex;
