@@ -45,229 +45,223 @@ $border-radius: 8px;
 // ------------------------------------ Homepage ---------------------------------
 // -------------------------------------------------------------------------------
 
-// NAV CSS --------------------------------------------
-// --------------------------------------------------------
+// ------------------------------------ Nav
 
-.nav_section {
-    height: 10vh;
-    margin: 0 5vw;
-    padding: 0 10rem;
-    width: 90vw;
-    z-index: 99;
+.nav-section {
+    align-items: center;
+    display: flex;
+    height: 20vh;
+    justify-content: center;
 
-    @media only screen and (max-width: 600px) {
-        margin: 0;
-        padding: 1rem 0;
-        position: absolute;
-        top: 0;
-        width: 100vw;
-    }
-
-    nav {
-        display: flex;
-        justify-content: space-between;
+    .nav {
         align-items: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
 
-        .nav_logo {
-            color: $primary-colour;
-            cursor: pointer;
-            font-family: $font-cursive;
-            font-size: 3.5rem;
-            font-weight: 300;
-
-            @media only screen and (max-width: 600px) {
-                color: white !important;
-            }
-
-            img {
-                max-width: 15rem;
-            }
+        #nav-check {
+            display: none;
         }
 
         .nav-btn {
-            color: $primary-colour;
             display: none;
-
-            @media only screen and (max-width: 600px) {
-                color: white !important;
-            }
         }
 
-        a:link {
-            color: $primary-colour;
-            text-decoration: none;
-        }
-
-        a:visited {
-            color: $primary-colour;
-            text-decoration: none;
-        }
-
-        a:hover {
-            color: $deep-blue;
-        }
-
-        a:focus {
-            color: $deep-blue;
-            text-decoration: none;
+        .nav-header .nav-title {
+            font-family: $font-cursive;
+            font-size: 6rem;
+            font-weight: 500;
         }
 
         ul {
+            align-items: center;
             display: flex;
-            list-style: none;
-            margin: 1rem;
+            justify-content: center;
+            line-height: 1.5rem;
+            width: 50vw;
 
             li {
-                padding: 1em;
-                font-weight: 300;
-                font-size: 1em;
-                letter-spacing: 2px;
-            }
-        }
+                font-size: 0.8rem;
+                letter-spacing: 0.1rem;
+                margin: 0 1rem;
+                text-transform: uppercase;
+                white-space: nowrap;
 
-        .mobile_nav {
-            display: none;
-        }
+                :hover {
+                    border-bottom: 5px solid $base-pink;
+                }
 
-        @media only screen and (max-width: 600px) {
-            .desktop_nav {
-                display: none;
-            }
-
-            .mobile_nav {
-                background-color: white;
-                color: $primary-colour;
-                display: none;
-                flex-direction: column;
-                position: fixed;
-                top: 0;
-                width: 100%;
-                z-index: 99;
-                margin: 0;
-                padding: 0 0 2rem;
-                text-align: center;
-
-                .close {
-                    color: $primary-colour;
-                    font-size: 2rem;
-                    text-align: right;
+                .active {
+                    font-weight: 600;
+                    font-size: 0.9rem;
                 }
             }
-
-            .nav-btn {
-                display: block;
-                padding-right: 1.5rem;
-            }
-
-            .nav-btn span.material-symbols-outlined {
-                font-size: 40px;
-            }
-
-            a.nav_logo,
-            .quick_contact_section,
-            .about_section_text {
-                padding: 0 1.5rem;
-            }
-
         }
-
     }
 }
 
-// LANDING CSS --------------------------------------------
-// --------------------------------------------------------
+@media (max-width:600px) {
 
-.landing {
-    background: url('../img/dancing.jpg');
-    background-size: cover;
-    background-position-y: -10rem;
-    background-repeat: no-repeat;
-    height: calc(90vh - 1rem);
-    margin: 0 1rem 1rem;
+    .nav-section {
+        // align-items: start !important;
+        height: 15vh !important;
 
-    @media (max-width:600px) {
-        background-position: center;
-        height: 100vh;
-        margin: 0;
-    }
+        .nav {
 
-    .header {
-        align-items: flex-end;
-        display: flex;
-        flex-direction: column;
-        height: 75vh;
-        justify-content: flex-start;
-        padding-left: 10vw;
-
-        @media only screen and (max-width: 600px) {
-            align-items: center;
-            height: 100vh;
-            justify-content: center;
-            padding: 1rem;
-        }
-
-        .heart-shape {
-            background: linear-gradient(rgb(175 175 175 / 27%), rgb(255 255 255 / 0%)), url(../img/background.jpg);
-            background-size: cover;
-            background-position-y: -1rem;
-            background-repeat: no-repeat;
-            clip-path: polygon(-41% 0, 50% 91%, 141% 0);
-            height: 400px;
-            position: absolute;
-            left: 5rem;
-            bottom: 0;
-            transform: rotate(-20deg);
-            width: 400px;
-            -webkit-mask-box-image: radial-gradient(#000 69%, rgba(0, 0, 0, 0) 70%) 84.5%/50%;
-            mask-border: radial-gradient(#000 69%, rgba(0, 0, 0, 0) 70%) 84.5%/50%;
-            -webkit-clip-path: polygon(-41% 0, 50% 91%, 141% 0);
-
-
-            @media (max-width:600px) {
-                height: 250px;
-                left: auto;
-                margin: 0 auto;
-                transform: rotate(0);
-                width: 250px;
-            }
-        }
-
-        .content {
-            padding: 3rem 5rem;
-            text-align: right;
-            z-index: 10;
-
-            @media only screen and (max-width: 600px) {
-                padding: 0.5rem;
-                text-align: left;
+            .nav-header .nav-title {
+                font-size: 4rem !important;
             }
 
-            h1 {
-                color: white;
-                font-family: $font-cursive;
-                font-size: 8rem;
-                font-weight: 300;
-                margin-bottom: 0;
+            .nav-btn {
+                display: inline-block !important;
+                position: absolute;
+                right: 0;
+                top: 0;
+                z-index: 99;
 
-                @media only screen and (max-width: 600px) {
-                    font-size: 5rem;
-                    padding-top: 6rem;
+                label {
+                    display: inline-block;
+                    width: 50px;
+                    height: 50px;
+                    padding: 10px;
+                    cursor: pointer;
+
+                    span {
+                        display: block;
+                        width: 26px;
+                        height: 10px;
+                        border-bottom: 2px solid black;
+                    }
                 }
             }
 
-            p {
-                color: white;
-                font-family: $font-main;
-                font-size: 1.3rem;
-                line-height: 1rem;
-                max-width: 50vw;
-                padding-right: 1rem;
+            #nav-check:checked~.nav-btn>label {
+                background-color: #ffffff;
+            }
 
-                @media only screen and (max-width: 600px) {
-                    font-weight: 500;
-                    line-height: 1.5rem;
-                    max-width: 100vw;
-                    padding: 1rem;
+            #nav-check:not(:checked)~.nav-links {
+                height: 0px;
+            }
+
+            #nav-check:checked~.nav-links {
+                height: fit-content;
+                overflow-y: auto;
+                padding: 5rem 0;
+                z-index: 90;
+            }
+
+            .nav-links {
+                position: absolute;
+                justify-content: start !important;
+                flex-direction: column;
+                gap: 20px;
+                width: 100vw !important;
+                height: 0px;
+                transition: all 0.3s ease-in;
+                overflow-y: hidden;
+                top: 0px;
+                left: 0px;
+                background: #ffffff;
+                box-shadow: 0px 8px 10px #28282882;
+
+                li {
+
+                    a {
+                        display: block;
+                        width: 100%;
+                        color: $primary-colour !important;
+                    }
+                }
+
+            }
+        }
+    }
+
+
+}
+
+// ------------------------------------ Header
+
+.heading-section {
+    align-items: center;
+    border-top: none;
+    display: flex;
+    justify-content: center;
+    margin: 0 3rem 3rem;
+
+    .main {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-image: url('../img/background.jpg');
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-position: center;
+        height: 60vh;
+        width: 80vw;
+
+        .inner-content {
+            max-width: 80vw;
+            padding: 1rem;
+
+            h1 {
+                color: white !important;
+                font-size: 7rem;
+                font-weight: 100;
+                line-height: 4rem;
+                /* reduce size to remove gap between text */
+                margin: 0px;
+            }
+
+            h1 span {
+                font-family: 'Passions Conflict', cursive;
+                padding: 0.5rem 0;
+            }
+
+            .rsvp-button {
+                display: flex;
+                justify-content: center;
+
+                a {
+                    button {
+                        border: 2px solid white;
+                        padding: 1rem;
+                        background: #ffffff38;
+                        color: white;
+                        margin: 2rem;
+                        cursor: pointer;
+                        width: 20vw;
+                    }
+
+                    :hover {
+                        background: $base-pink;
+                        border: 2px solid $base-pink;
+                        transition: 0.3s ease-in-out;
+                        color: $deep-pink;
+                    }
+                }
+
+
+            }
+        }
+
+    }
+
+}
+
+@media (max-width:600px) {
+    .heading-section {
+        margin: 0;
+
+        .main {
+            width: 100vw;
+            background-attachment: inherit !important;
+    
+            .inner-content {
+    
+                h1 {
+                    font-size: 4rem !important;
                 }
             }
         }
@@ -425,129 +419,66 @@ $border-radius: 8px;
 // ------------------------------------ Travel
 
 .travel-section {
-    background: linear-gradient(to bottom, white 50%, $base-pink 50%);
     display: flex;
     justify-content: center;
+    align-items: center;
     flex-direction: column;
-    padding: 4rem 15rem 0;
+    padding: 4rem 10rem;
 
-    .header-strip {
-        display: none;
-
-        @media only screen and (max-width: 600px) {
-            display: block;
-        }
+    .heading-small {
+        margin: 1rem;
+        font-size: 0.9rem;
+        letter-spacing: 0.1rem;
+        line-height: 2rem;
     }
 
-    @media only screen and (max-width: 600px) {
-        padding: 0;
+    .travel-content {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .left-side,
+        .right-side {
+            align-items: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        h3 {
+            font-size: 2rem;
+            font-family: sans-serif;
+            font-weight: 100;
+            margin: 0 0 1rem;
+        }
+
+        p.para-reg {
+            margin-bottom: 1rem;
+            padding: 0 1rem;
+            letter-spacing: 0.1rem;
+            text-align: center;
+        }
+
     }
 
-    .getting-there {
-        margin: auto;
-        width: 80vw;
-
-        @media only screen and (max-width: 600px) {
-            width: calc(100vw - 2rem);
-        }
-
-        h1 {
-            font-family: $font-cursive;
-            font-size: 6rem;
-
-            @media only screen and (max-width: 600px) {
-                font-size: 5rem;
-            }
-        }
-
-        p {
-            line-height: 1rem;
-
-            @media only screen and (max-width: 600px) {
-                font-size: 1rem;
-            }
-        }
-
-        .map {
-            filter: grayscale(100%);
-            padding-right: 10rem;
-            position: relative;
-            text-align: right;
-            z-index: 99;
-
-            @media only screen and (max-width: 600px) {
-                padding: 0;
-                width: 100%;
-            }
-            
-        }
-        
-        iframe {
-            @media only screen and (max-width: 600px) {
-                width: 100%;
-            }
-        }
+    a {
+        text-decoration: none;
+        color: $primary-colour;
+        cursor: pointer;
+        font-size: 0.8rem;
+        letter-spacing: 0.1rem;
+        border-bottom: 1px solid $primary-colour;
+        line-height: 2rem;
+        padding: 0.5rem 0 0;
     }
 }
 
-.once-there {
-    background: linear-gradient(to bottom, $base-pink 50%, white 50%);
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    padding: 2rem 15rem;
+@media (max-width:600px) {
+    .travel-section {
+        padding: 2rem 2rem 3rem;
 
-    @media only screen and (max-width: 600px) {
-        padding: 1rem;
-    }
-
-    h1 {
-        font-family: $font-cursive;
-        font-size: 6rem;
-
-        @media only screen and (max-width: 600px) {
-            font-size: 5rem;
-        }
-    }
-
-    p {
-        line-height: 1rem;
-
-        @media only screen and (max-width: 600px) {
-            font-size: 1rem;
-            line-height: 1rem;
-        }
-    }
-
-    .places-to-see {
-        display: flex;
-        flex-direction: row;
-        gap: 2rem;
-
-        @media only screen and (max-width: 600px) {
+        .travel-content {
             flex-direction: column;
-        }
-
-        .places-card {
-            max-width: 33%;
-            margin-top: 5rem;
-
-            @media only screen and (max-width: 600px) {
-                margin-top: 2rem;
-                max-width: 100%;
-            }
-
-            img {
-                height: 300px;
-                object-fit: cover;
-                margin-bottom: 1rem;
-                width: 100%;
-            }
-
-            p.lead {
-                font-weight: 500;
-                padding: 1rem 0;
-            }
         }
     }
 }
@@ -616,7 +547,7 @@ $border-radius: 8px;
 
             .title {
                 width: 50vw;
-
+                
                 h2 {
                     font-size: 1rem;
                 }
@@ -748,7 +679,7 @@ $border-radius: 8px;
         }
 
         .match-image {
-
+            
             img {
                 border-radius: 1rem;
                 max-width: 20rem;
@@ -784,7 +715,7 @@ $border-radius: 8px;
         }
 
         .dating-image {
-
+            
             img {
                 border-radius: 1rem;
                 max-height: 20vh;
@@ -836,7 +767,6 @@ $border-radius: 8px;
 
 @media (max-width:600px) {
     .story-container {
-
         .match-container,
         .dating-container,
         .proposal-container {
