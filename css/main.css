@@ -38,33 +38,7 @@
 .nav-section .nav .nav-btn {
   display: none;
 }
-<<<<<<< Updated upstream
 .nav-section .nav .nav-header .nav-title {
-=======
-@media (max-width: 600px) {
-  .landing .header .heart-shape {
-    bottom: -3rem;
-    height: 250px;
-    left: auto;
-    margin: 0 auto;
-    transform: rotate(0);
-    width: 250px;
-  }
-}
-.landing .header .content {
-  padding: 3rem 5rem;
-  text-align: right;
-  z-index: 10;
-}
-@media only screen and (max-width: 600px) {
-  .landing .header .content {
-    padding: 0.5rem;
-    text-align: left;
-  }
-}
-.landing .header .content h1 {
-  color: white;
->>>>>>> Stashed changes
   font-family: "Passions Conflict", cursive;
   font-size: 6rem;
   font-weight: 500;

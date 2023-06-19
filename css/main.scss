@@ -108,61 +108,8 @@ $border-radius: 8px;
 
         .nav {
 
-<<<<<<< Updated upstream
             .nav-header .nav-title {
                 font-size: 4rem !important;
-=======
-    .header {
-        align-items: flex-end;
-        display: flex;
-        flex-direction: column;
-        height: 75vh;
-        justify-content: flex-start;
-        padding-left: 10vw;
-
-        @media only screen and (max-width: 600px) {
-            align-items: center;
-            height: 100vh;
-            justify-content: center;
-            padding: 1rem;
-        }
-
-        .heart-shape {
-            background: linear-gradient(rgb(175 175 175 / 27%), rgb(255 255 255 / 0%)), url(../img/background.jpg);
-            background-size: cover;
-            background-position-y: -1rem;
-            background-repeat: no-repeat;
-            clip-path: polygon(-41% 0, 50% 91%, 141% 0);
-            height: 400px;
-            position: absolute;
-            left: 5rem;
-            bottom: 0;
-            transform: rotate(-20deg);
-            width: 400px;
-            -webkit-mask-box-image: radial-gradient(#000 69%, rgba(0, 0, 0, 0) 70%) 84.5%/50%;
-            mask-border: radial-gradient(#000 69%, rgba(0, 0, 0, 0) 70%) 84.5%/50%;
-            -webkit-clip-path: polygon(-41% 0, 50% 91%, 141% 0);
-
-
-            @media (max-width:600px) {
-                bottom: -3rem;
-                height: 250px;
-                left: auto;
-                margin: 0 auto;
-                transform: rotate(0);
-                width: 250px;
-            }
-        }
-
-        .content {
-            padding: 3rem 5rem;
-            text-align: right;
-            z-index: 10;
-
-            @media only screen and (max-width: 600px) {
-                padding: 0.5rem;
-                text-align: left;
->>>>>>> Stashed changes
             }
 
             .nav-btn {
