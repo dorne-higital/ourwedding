@@ -20,178 +20,213 @@
   height: 15vh;
 }
 
-.nav-section {
-  align-items: center;
-  display: flex;
-  height: 20vh;
-  justify-content: center;
+.nav_section {
+  height: 10vh;
+  margin: 0 5vw;
+  padding: 0 10rem;
+  width: 90vw;
+  z-index: 99;
 }
-.nav-section .nav {
-  align-items: center;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-.nav-section .nav #nav-check {
-  display: none;
-}
-.nav-section .nav .nav-btn {
-  display: none;
-}
-.nav-section .nav .nav-header .nav-title {
-  font-family: "Passions Conflict", cursive;
-  font-size: 6rem;
-  font-weight: 500;
-}
-.nav-section .nav ul {
-  align-items: center;
-  display: flex;
-  justify-content: center;
-  line-height: 1.5rem;
-  width: 50vw;
-}
-.nav-section .nav ul li {
-  font-size: 0.8rem;
-  letter-spacing: 0.1rem;
-  margin: 0 1rem;
-  text-transform: uppercase;
-  white-space: nowrap;
-}
-.nav-section .nav ul li :hover {
-  border-bottom: 5px solid #f9d9ee;
-}
-.nav-section .nav ul li .active {
-  font-weight: 600;
-  font-size: 0.9rem;
-}
-
-@media (max-width: 600px) {
-  .nav-section {
-    height: 15vh !important;
-  }
-  .nav-section .nav .nav-header .nav-title {
-    font-size: 4rem !important;
-  }
-  .nav-section .nav .nav-btn {
-    display: inline-block !important;
+@media only screen and (max-width: 600px) {
+  .nav_section {
+    margin: 0;
+    padding: 1rem 0;
     position: absolute;
-    right: 0;
     top: 0;
-    z-index: 99;
-  }
-  .nav-section .nav .nav-btn label {
-    display: inline-block;
-    width: 50px;
-    height: 50px;
-    padding: 10px;
-    cursor: pointer;
-  }
-  .nav-section .nav .nav-btn label span {
-    display: block;
-    width: 26px;
-    height: 10px;
-    border-bottom: 2px solid black;
-  }
-  .nav-section .nav #nav-check:checked ~ .nav-btn > label {
-    background-color: #ffffff;
-  }
-  .nav-section .nav #nav-check:not(:checked) ~ .nav-links {
-    height: 0px;
-  }
-  .nav-section .nav #nav-check:checked ~ .nav-links {
-    height: -moz-fit-content;
-    height: fit-content;
-    overflow-y: auto;
-    padding: 5rem 0;
-    z-index: 90;
-  }
-  .nav-section .nav .nav-links {
-    position: absolute;
-    justify-content: start !important;
-    flex-direction: column;
-    gap: 20px;
-    width: 100vw !important;
-    height: 0px;
-    transition: all 0.3s ease-in;
-    overflow-y: hidden;
-    top: 0px;
-    left: 0px;
-    background: #ffffff;
-    box-shadow: 0px 8px 10px rgba(40, 40, 40, 0.5098039216);
-  }
-  .nav-section .nav .nav-links li a {
-    display: block;
-    width: 100%;
-    color: #282828 !important;
+    width: 100vw;
   }
 }
-.heading-section {
+.nav_section nav {
+  display: flex;
+  justify-content: space-between;
   align-items: center;
-  border-top: none;
-  display: flex;
-  justify-content: center;
-  margin: 0 3rem 3rem;
 }
-.heading-section .main {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-image: url("../img/background.jpg");
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-position: center;
-  height: 60vh;
-  width: 80vw;
-}
-.heading-section .main .inner-content {
-  max-width: 80vw;
-  padding: 1rem;
-}
-.heading-section .main .inner-content h1 {
-  color: white !important;
-  font-size: 7rem;
-  font-weight: 100;
-  line-height: 4rem;
-  /* reduce size to remove gap between text */
-  margin: 0px;
-}
-.heading-section .main .inner-content h1 span {
-  font-family: "Passions Conflict", cursive;
-  padding: 0.5rem 0;
-}
-.heading-section .main .inner-content .rsvp-button {
-  display: flex;
-  justify-content: center;
-}
-.heading-section .main .inner-content .rsvp-button a button {
-  border: 2px solid white;
-  padding: 1rem;
-  background: rgba(255, 255, 255, 0.2196078431);
-  color: white;
-  margin: 2rem;
+.nav_section nav .nav_logo {
+  color: #282828;
   cursor: pointer;
-  width: 20vw;
+  font-family: "Passions Conflict", cursive;
+  font-size: 3.5rem;
+  font-weight: 300;
 }
-.heading-section .main .inner-content .rsvp-button a :hover {
-  background: #f9d9ee;
-  border: 2px solid #f9d9ee;
-  transition: 0.3s ease-in-out;
-  color: #a6277d;
+@media only screen and (max-width: 600px) {
+  .nav_section nav .nav_logo {
+    color: white !important;
+  }
+}
+.nav_section nav .nav_logo img {
+  max-width: 15rem;
+}
+.nav_section nav .nav-btn {
+  color: #282828;
+  display: none;
+}
+@media only screen and (max-width: 600px) {
+  .nav_section nav .nav-btn {
+    color: white !important;
+  }
+}
+.nav_section nav a:link {
+  color: #282828;
+  text-decoration: none;
+}
+.nav_section nav a:visited {
+  color: #282828;
+  text-decoration: none;
+}
+.nav_section nav a:hover {
+  color: #06073f;
+}
+.nav_section nav a:focus {
+  color: #06073f;
+  text-decoration: none;
+}
+.nav_section nav ul {
+  display: flex;
+  list-style: none;
+  margin: 1rem;
+}
+.nav_section nav ul li {
+  padding: 1em;
+  font-weight: 300;
+  font-size: 1em;
+  letter-spacing: 2px;
+}
+.nav_section nav .mobile_nav {
+  display: none;
+}
+@media only screen and (max-width: 600px) {
+  .nav_section nav .desktop_nav {
+    display: none;
+  }
+  .nav_section nav .mobile_nav {
+    background-color: white;
+    color: #282828;
+    display: none;
+    flex-direction: column;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 99;
+    margin: 0;
+    padding: 0 0 2rem;
+    text-align: center;
+  }
+  .nav_section nav .mobile_nav .close {
+    color: #282828;
+    font-size: 2rem;
+    text-align: right;
+  }
+  .nav_section nav .nav-btn {
+    display: block;
+    padding-right: 1.5rem;
+  }
+  .nav_section nav .nav-btn span.material-symbols-outlined {
+    font-size: 40px;
+  }
+  .nav_section nav a.nav_logo,
+  .nav_section nav .quick_contact_section,
+  .nav_section nav .about_section_text {
+    padding: 0 1.5rem;
+  }
 }
 
+.landing {
+  background: url("../img/dancing.jpg");
+  background-size: cover;
+  background-position-y: -10rem;
+  background-repeat: no-repeat;
+  height: calc(90vh - 1rem);
+  margin: 0 1rem 1rem;
+}
 @media (max-width: 600px) {
-  .heading-section {
+  .landing {
+    background-position: center;
+    height: 100vh;
     margin: 0;
   }
-  .heading-section .main {
-    width: 100vw;
-    background-attachment: inherit !important;
-  }
-  .heading-section .main .inner-content h1 {
-    font-size: 4rem !important;
+}
+.landing .header {
+  align-items: flex-end;
+  display: flex;
+  flex-direction: column;
+  height: 75vh;
+  justify-content: flex-start;
+  padding-left: 10vw;
+}
+@media only screen and (max-width: 600px) {
+  .landing .header {
+    align-items: center;
+    height: 100vh;
+    justify-content: center;
+    padding: 1rem;
   }
 }
+.landing .header .heart-shape {
+  background: linear-gradient(rgba(175, 175, 175, 0.27), rgba(255, 255, 255, 0)), url(../img/background.jpg);
+  background-size: cover;
+  background-position-y: -1rem;
+  background-repeat: no-repeat;
+  clip-path: polygon(-41% 0, 50% 91%, 141% 0);
+  height: 400px;
+  position: absolute;
+  left: 5rem;
+  bottom: 0;
+  transform: rotate(-20deg);
+  width: 400px;
+  -webkit-mask-box-image: radial-gradient(#000 69%, rgba(0, 0, 0, 0) 70%) 84.5%/50%;
+  mask-border: radial-gradient(#000 69%, rgba(0, 0, 0, 0) 70%) 84.5%/50%;
+  -webkit-clip-path: polygon(-41% 0, 50% 91%, 141% 0);
+}
+@media (max-width: 600px) {
+  .landing .header .heart-shape {
+    height: 250px;
+    left: auto;
+    margin: 0 auto;
+    transform: rotate(0);
+    width: 250px;
+  }
+}
+.landing .header .content {
+  padding: 3rem 5rem;
+  text-align: right;
+  z-index: 10;
+}
+@media only screen and (max-width: 600px) {
+  .landing .header .content {
+    padding: 0.5rem;
+    text-align: left;
+  }
+}
+.landing .header .content h1 {
+  color: white;
+  font-family: "Passions Conflict", cursive;
+  font-size: 8rem;
+  font-weight: 300;
+  margin-bottom: 0;
+}
+@media only screen and (max-width: 600px) {
+  .landing .header .content h1 {
+    font-size: 5rem;
+    padding-top: 6rem;
+  }
+}
+.landing .header .content p {
+  color: white;
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.3rem;
+  line-height: 1rem;
+  max-width: 50vw;
+  padding-right: 1rem;
+}
+@media only screen and (max-width: 600px) {
+  .landing .header .content p {
+    font-weight: 500;
+    line-height: 1.5rem;
+    max-width: 100vw;
+    padding: 1rem;
+  }
+}
+
 .countdown-text {
   align-items: center;
   display: flex;
@@ -324,61 +359,132 @@
   }
 }
 .travel-section {
+  background: linear-gradient(to bottom, white 50%, #f9d9ee 50%);
   display: flex;
   justify-content: center;
-  align-items: center;
   flex-direction: column;
-  padding: 4rem 10rem;
+  padding: 4rem 15rem 0;
 }
-.travel-section .heading-small {
-  margin: 1rem;
-  font-size: 0.9rem;
-  letter-spacing: 0.1rem;
-  line-height: 2rem;
+.travel-section .header-strip {
+  display: none;
 }
-.travel-section .travel-content {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+@media only screen and (max-width: 600px) {
+  .travel-section .header-strip {
+    display: block;
+  }
 }
-.travel-section .travel-content .left-side,
-.travel-section .travel-content .right-side {
-  align-items: center;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+@media only screen and (max-width: 600px) {
+  .travel-section {
+    padding: 0;
+  }
 }
-.travel-section .travel-content h3 {
-  font-size: 2rem;
-  font-family: sans-serif;
-  font-weight: 100;
-  margin: 0 0 1rem;
+.travel-section .getting-there {
+  margin: auto;
+  width: 80vw;
 }
-.travel-section .travel-content p.para-reg {
-  margin-bottom: 1rem;
-  padding: 0 1rem;
-  letter-spacing: 0.1rem;
-  text-align: center;
+@media only screen and (max-width: 600px) {
+  .travel-section .getting-there {
+    width: calc(100vw - 2rem);
+  }
 }
-.travel-section a {
-  text-decoration: none;
-  color: #282828;
-  cursor: pointer;
-  font-size: 0.8rem;
-  letter-spacing: 0.1rem;
-  border-bottom: 1px solid #282828;
-  line-height: 2rem;
-  padding: 0.5rem 0 0;
+.travel-section .getting-there h1 {
+  font-family: "Passions Conflict", cursive;
+  font-size: 6rem;
+}
+@media only screen and (max-width: 600px) {
+  .travel-section .getting-there h1 {
+    font-size: 5rem;
+  }
+}
+.travel-section .getting-there p {
+  line-height: 1rem;
+}
+@media only screen and (max-width: 600px) {
+  .travel-section .getting-there p {
+    font-size: 1rem;
+  }
+}
+.travel-section .getting-there .map {
+  filter: grayscale(100%);
+  padding-right: 10rem;
+  position: relative;
+  text-align: right;
+  z-index: 99;
+}
+@media only screen and (max-width: 600px) {
+  .travel-section .getting-there .map {
+    padding: 0;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .travel-section .getting-there iframe {
+    width: 100%;
+  }
 }
 
-@media (max-width: 600px) {
-  .travel-section {
-    padding: 2rem 2rem 3rem;
+.once-there {
+  background: linear-gradient(to bottom, #f9d9ee 50%, white 50%);
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  padding: 2rem 15rem;
+}
+@media only screen and (max-width: 600px) {
+  .once-there {
+    padding: 1rem;
   }
-  .travel-section .travel-content {
+}
+.once-there h1 {
+  font-family: "Passions Conflict", cursive;
+  font-size: 6rem;
+}
+@media only screen and (max-width: 600px) {
+  .once-there h1 {
+    font-size: 5rem;
+  }
+}
+.once-there p {
+  line-height: 1rem;
+}
+@media only screen and (max-width: 600px) {
+  .once-there p {
+    font-size: 1rem;
+    line-height: 1rem;
+  }
+}
+.once-there .places-to-see {
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+}
+@media only screen and (max-width: 600px) {
+  .once-there .places-to-see {
     flex-direction: column;
   }
 }
+.once-there .places-to-see .places-card {
+  max-width: 33%;
+  margin-top: 5rem;
+}
+@media only screen and (max-width: 600px) {
+  .once-there .places-to-see .places-card {
+    margin-top: 2rem;
+    max-width: 100%;
+  }
+}
+.once-there .places-to-see .places-card img {
+  height: 300px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  margin-bottom: 1rem;
+  width: 100%;
+}
+.once-there .places-to-see .places-card p.lead {
+  font-weight: 500;
+  padding: 1rem 0;
+}
+
 .party-section {
   background: #f9d9ee;
   color: #c12121;
