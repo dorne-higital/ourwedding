@@ -58,7 +58,9 @@ $border-radius: 8px;
     width: 100%;
 
     @media only screen and (max-width: 600px) {
+        background-image: linear-gradient(rgb(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../img/broadoaks.jpeg);
         background-attachment: inherit;
+        color: #fff;
         height: 50vh;
         padding-left: 1rem;
         width: 100%;
@@ -119,7 +121,7 @@ $border-radius: 8px;
 
             @media only screen and (max-width: 600px) {
                 font-size: 2rem;
-                // color: white !important;
+                color: white !important;
             }
 
             img {
