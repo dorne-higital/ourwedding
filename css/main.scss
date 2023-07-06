@@ -41,6 +41,47 @@ $border-radius: 8px;
     height: 15vh;
 }
 
+.heading-container {
+    align-items: flex-start;
+    background-image: linear-gradient(to right, rgb(255 255 255 / 1)0%, rgb(255 255 255 / 1)20%, rgba(0, 0, 0, 0.5)100%), url(../img/broadoaks.jpeg);
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: $primary-colour;
+    display: flex;
+    flex-direction: column;
+    height: 40vh;
+    justify-content: center;
+    padding-left: 15rem;
+    position: relative;
+    width: 100%;
+
+    @media only screen and (max-width: 600px) {
+        height: 50vh;
+        padding-left: 1rem;
+        width: 100%;
+    }
+
+    h1 {
+        font-family: $font-cursive;
+        font-size: 8rem;
+
+        @media only screen and (max-width: 600px) {
+            font-size: 5rem;
+        }
+    }
+
+    p {
+        line-height: 1rem;
+        padding-left: 1rem;
+
+        @media only screen and (max-width: 600px) {
+            font-size: 1rem;
+        }
+    }
+}
+
 // -------------------------------------------------------------------------------
 // ------------------------------------ Homepage ---------------------------------
 // -------------------------------------------------------------------------------
@@ -76,7 +117,8 @@ $border-radius: 8px;
             font-weight: 300;
 
             @media only screen and (max-width: 600px) {
-                color: white !important;
+                font-size: 2rem;
+                // color: white !important;
             }
 
             img {
@@ -120,7 +162,7 @@ $border-radius: 8px;
             li {
                 padding: 1em;
                 font-weight: 300;
-                font-size: 1em;
+                font-size: 0.8rem;
                 letter-spacing: 2px;
             }
         }
@@ -193,12 +235,11 @@ $border-radius: 8px;
     }
 
     .header {
-        align-items: flex-end;
+        align-items: center;
         display: flex;
         flex-direction: column;
         height: 75vh;
-        justify-content: flex-start;
-        padding-left: 10vw;
+        justify-content: center;
 
         @media only screen and (max-width: 600px) {
             align-items: center;
@@ -235,7 +276,7 @@ $border-radius: 8px;
 
         .content {
             padding: 3rem 5rem;
-            text-align: right;
+            text-align: center;
             z-index: 10;
 
             @media only screen and (max-width: 600px) {
@@ -244,26 +285,29 @@ $border-radius: 8px;
             }
 
             h1 {
-                color: white;
+                color: $base-blue;
                 font-family: $font-cursive;
-                font-size: 8rem;
+                font-size: 10rem;
                 font-weight: 300;
+                line-height: 8rem;
                 margin-bottom: 0;
+                text-shadow: 1px 1px 1px $deep-blue;
 
                 @media only screen and (max-width: 600px) {
-                    font-size: 5rem;
+                    font-size: 4.5rem;
+                    line-height: 4rem;
                 }
             }
 
             p {
                 color: white;
-                font-family: $font-main;
-                font-size: 1.3rem;
+                font-family: $font-cursive;
+                font-size: 4rem;
                 line-height: 1rem;
-                max-width: 50vw;
-                padding-right: 1rem;
+                text-shadow: 1px 1px 1px $deep-blue;
 
                 @media only screen and (max-width: 600px) {
+                    font-size: 2.5rem;
                     font-weight: 500;
                     line-height: 1.5rem;
                     max-width: 100vw;
@@ -274,60 +318,22 @@ $border-radius: 8px;
     }
 }
 
-// ------------------------------------ Countdown
-
-.countdown-text {
-    align-items: center;
-    display: flex;
-    font-size: 1rem;
-    font-family: $font-main;
-    justify-content: center;
-    margin-bottom: 0.5rem;
-
-    @media (max-width:600px) {
-        margin-top: 2rem;
-    }
-}
-
-#countdown {
-    align-items: center;
-    display: flex;
-    height: 10vh;
-    justify-content: center;
-
-    .countdown-section {
-        align-items: center;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        margin: 1rem;
-        padding: 1rem;
-
-        span {
-            font-size: 2rem;
-        }
-    }
-}
-
-#end-text {
-    align-items: center;
-    display: flex;
-    font-size: 4rem;
-    font-family: $font-cursive;
-    height: 10vh;
-    justify-content: center;
-    padding-bottom: 3rem;
-}
-
 // ------------------------------------ Block section
 
 .block-container {
     font-size: 4rem;
-    margin: 0 4rem;
+    margin: 1rem 4rem;
     display: inline-block;
     line-height: 3rem;
     text-align: justify;
     text-transform: uppercase;
+
+    @media (max-width:600px) {
+        font-size: 1.5rem;
+        line-height: 2rem;
+        margin: 0;
+        padding: 1rem;
+    }
 
     p {
         font-weight: 900;
@@ -348,23 +354,105 @@ $border-radius: 8px;
 
 }
 
-@media (max-width:600px) {
-    .block-container {
-        font-size: 1.5rem;
-        line-height: 2rem;
-        margin: 0;
-        padding: 1rem;
+// ------------------------------------ Countdown
+
+.countdown-container {
+    background-color: $base-blue;
+    padding: 4rem;
+
+    .countdown-text {
+        align-items: center;
+        color: $deep-blue;
+        display: flex;
+        font-size: 1rem;
+        font-family: $font-main;
+        justify-content: center;
+        margin-bottom: 0.5rem;
+
+        @media (max-width:600px) {
+        }
+    }
+
+    #countdown {
+        align-items: center;
+        display: flex;
+        height: 10vh;
+        justify-content: center;
+
+        .countdown-section {
+            align-items: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            margin: 1rem;
+            padding: 1rem;
+
+            @media (max-width:600px) {
+                margin: 0;
+            }
+
+            span {
+                font-family: $font-cursive;
+                font-size: 6rem;
+                line-height: 4rem;
+
+                @media (max-width:600px) {
+                    font-size: 4rem;
+                    line-height: 3rem;
+                }
+            }
+        }
+    }
+
+    #end-text {
+        align-items: center;
+        display: flex;
+        font-size: 4rem;
+        font-family: $font-cursive;
+        height: 10vh;
+        justify-content: center;
+        padding-bottom: 3rem;
     }
 }
 
 // ------------------------------------ When & where
 
 .when-section {
-    display: flex;
-    justify-content: center;
     align-items: center;
-    background: $deep-blue;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.5)), url("../img/broadoaks.jpeg");
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
     color: $base-blue;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 8rem 5rem;
+    position: relative;
+
+    @media (max-width:600px) {
+        flex-direction: column;
+        padding: 5rem 1rem;
+    }
+
+
+    h1 {
+        font-family: $font-cursive;
+        font-size: 6rem;
+
+        @media (max-width:600px) {
+            font-size: 4rem;
+        }
+    }
+
+    .contents {
+        display: flex;
+
+        @media (max-width:600px) {
+            flex-direction: column;
+        }
+    }
 
     .when-side,
     .where-side {
@@ -372,7 +460,12 @@ $border-radius: 8px;
         display: flex;
         flex-direction: column;
         justify-content: center;
-        padding: 5rem;
+        padding: 0 5rem 5rem;
+
+        @media (max-width:600px) {
+            padding: 2rem;
+            text-align: center;
+        }
 
         .heading-small {
             margin: 1rem;
@@ -406,45 +499,6 @@ $border-radius: 8px;
             padding: 0.5rem 0;
         }
 
-    }
-}
-
-@media (max-width:600px) {
-    .when-section {
-        flex-direction: column;
-        padding-bottom: 1rem;
-
-        .when-side,
-        .where-side {
-            padding: 2rem;
-            text-align: center;
-        }
-    }
-}
-
-// ------------------------------------ Travel Home
-
-.travel-section-home {
-    padding: 4rem 10rem;
-    text-align: center;
-
-    @media (max-width:600px) {
-        padding: 1rem;
-    }
-
-    .travel-content {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-
-        @media (max-width:600px) {
-            flex-direction: column;
-        }
-
-        .left-side,
-        .right-side {
-            flex-grow: 1;
-        }
     }
 }
 
@@ -623,32 +677,6 @@ $border-radius: 8px;
         padding: 0;
     }
 
-    .heading-container {
-        margin: auto;
-        width: 100%;
-
-        @media only screen and (max-width: 600px) {
-            width: calc(100vw - 2rem);
-        }
-
-        h1 {
-            font-family: $font-cursive;
-            font-size: 6rem;
-
-            @media only screen and (max-width: 600px) {
-                font-size: 5rem;
-            }
-        }
-
-        p {
-            line-height: 1rem;
-
-            @media only screen and (max-width: 600px) {
-                font-size: 1rem;
-            }
-        }
-    }
-
     .header-strip {
         display: none;
 
@@ -735,49 +763,24 @@ $border-radius: 8px;
         padding: 0;
     }
 
-    .heading-container {
-        margin: auto;
-        width: 80vw;
+    .heading-image {
+        filter: grayscale(50%);
+        position: relative;
+        text-align: right;
+        z-index: 99;
 
         @media only screen and (max-width: 600px) {
-            width: calc(100vw - 2rem);
+            padding: 0;
+            width: 100%;
         }
 
-        h1 {
-            font-family: $font-cursive;
-            font-size: 6rem;
+    }
 
-            @media only screen and (max-width: 600px) {
-                font-size: 5rem;
-            }
-        }
+    iframe {
+        width: 100%;
 
-        p {
-            line-height: 1rem;
-
-            @media only screen and (max-width: 600px) {
-                font-size: 1rem;
-            }
-        }
-
-        .heading-image {
-            filter: grayscale(50%);
-            padding-right: 10rem;
-            position: relative;
-            text-align: right;
-            z-index: 99;
-
-            @media only screen and (max-width: 600px) {
-                padding: 0;
-                width: 100%;
-            }
-            
-        }
-        
-        iframe {
-            @media only screen and (max-width: 600px) {
-                width: 100%;
-            }
+        @media only screen and (max-width: 600px) {
+            width: 100%;
         }
     }
 }
