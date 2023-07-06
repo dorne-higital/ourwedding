@@ -38,6 +38,7 @@
 }
 @media only screen and (max-width: 600px) {
   .heading-container {
+    background-attachment: inherit;
     height: 50vh;
     padding-left: 1rem;
     width: 100%;
