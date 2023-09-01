@@ -178,7 +178,7 @@
 }
 
 .landing {
-  background: url("../img/dancing.jpg");
+  background: url("../img/emma_dan_walk_dist.jpg");
   background-size: cover;
   background-position-y: -10rem;
   background-repeat: no-repeat;
@@ -244,7 +244,7 @@
   }
 }
 .landing .header .content h1 {
-  color: #99b0df;
+  color: white;
   font-family: "Passions Conflict", cursive;
   font-size: 10rem;
   font-weight: 300;
