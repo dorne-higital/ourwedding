@@ -240,7 +240,7 @@
 @media only screen and (max-width: 600px) {
   .landing .header .content {
     padding: 0.5rem;
-    text-align: left;
+    text-align: center;
   }
 }
 .landing .header .content h1 {
@@ -252,10 +252,17 @@
   margin-bottom: 0;
   text-shadow: 1px 1px 1px #06073f;
 }
+.landing .header .content h1 span {
+  font-family: "Passions Conflict", cursive;
+}
 @media only screen and (max-width: 600px) {
   .landing .header .content h1 {
-    font-size: 4.5rem;
+    font-size: 10rem;
     line-height: 4rem;
+  }
+  .landing .header .content h1 span {
+    font-size: 3.5rem;
+    margin: 0 -1.5rem;
   }
 }
 .landing .header .content p {
@@ -270,6 +277,7 @@
     font-size: 2.5rem;
     font-weight: 500;
     line-height: 1.5rem;
+    margin-top: 1rem;
     max-width: 100vw;
     padding: 1rem;
   }
