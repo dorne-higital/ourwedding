@@ -240,7 +240,7 @@
 @media only screen and (max-width: 600px) {
   .landing .header .content {
     padding: 0.5rem;
-    text-align: center;
+    text-align: left;
   }
 }
 .landing .header .content h1 {
