@@ -283,6 +283,7 @@ $border-radius: 8px;
             z-index: 10;
 
             @media only screen and (max-width: 600px) {
+                margin-bottom: 4rem;
                 padding: 0.5rem;
                 text-align: left;
             }
@@ -707,6 +708,7 @@ $border-radius: 8px;
 
         @media only screen and (max-width: 600px) {
             flex-direction: column;
+            margin: 0;
         }
 
         &:nth-of-type(even) {
@@ -738,7 +740,7 @@ $border-radius: 8px;
             width: 50%;
 
             @media only screen and (max-width: 600px) {
-                padding: 1rem 0;
+                padding: 0;
                 width: 100%;
             }
 
@@ -758,7 +760,7 @@ $border-radius: 8px;
 // -------------------------------------------------------------------------------
 
 .travel-section {
-    background: linear-gradient(to bottom, white 50%, $base-pink 50%);
+    // background: linear-gradient(to bottom, white 50%, $base-pink 50%);
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -799,12 +801,18 @@ $border-radius: 8px;
 }
 
 
-.once-there {
-    background: linear-gradient(to bottom, $base-pink 50%, white 50%);
+.once-there,
+.travel-there,
+.accomodation {
+    // background: linear-gradient(to bottom, $base-pink 20%, white 50%);
     display: flex;
     justify-content: center;
     flex-direction: column;
     padding: 2rem 15rem;
+
+    &:nth-of-type(odd) {
+        // background: linear-gradient(to bottom, $base-blue 20%, white 50%);
+    }
 
     @media only screen and (max-width: 600px) {
         padding: 1rem;
@@ -815,7 +823,7 @@ $border-radius: 8px;
         font-size: 6rem;
 
         @media only screen and (max-width: 600px) {
-            font-size: 5rem;
+            font-size: 4rem;
         }
     }
 
@@ -824,11 +832,12 @@ $border-radius: 8px;
 
         @media only screen and (max-width: 600px) {
             font-size: 1rem;
-            line-height: 1rem;
+            line-height: 1.5rem;
         }
     }
 
-    .places-to-see {
+    .places-to-see,
+    .places-to-stay {
         display: flex;
         flex-direction: row;
         gap: 2rem;
@@ -839,7 +848,7 @@ $border-radius: 8px;
 
         .places-card {
             max-width: 33%;
-            margin-top: 5rem;
+            margin-top: 2rem;
 
             @media only screen and (max-width: 600px) {
                 margin-top: 2rem;
@@ -871,14 +880,16 @@ $border-radius: 8px;
     flex-direction: column;
 
     .rsvp-container {
-        background: $base-blue;
-        border-radius: 10px;
-        margin: auto;
+        align-items: center;
+        // background: $base-blue;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        margin: 2rem auto;
         padding: 2rem;
         position: relative;
-        transform: translateY(-5vh);
         text-align: center;
-        width: 40vw;
+        width: 60vw;
 
         h2 {
             font-family: 'Montserrat', sans-serif;
@@ -920,6 +931,7 @@ $border-radius: 8px;
             display: flex;
             justify-content: center;
             flex-direction: column;
+            width: 50%;
 
             input,
             textarea,

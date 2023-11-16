@@ -239,6 +239,7 @@
 }
 @media only screen and (max-width: 600px) {
   .landing .header .content {
+    margin-bottom: 4rem;
     padding: 0.5rem;
     text-align: left;
   }
@@ -608,6 +609,7 @@
 @media only screen and (max-width: 600px) {
   .story-container .row-container {
     flex-direction: column;
+    margin: 0;
   }
 }
 .story-container .row-container:nth-of-type(even) {
@@ -640,7 +642,7 @@
 }
 @media only screen and (max-width: 600px) {
   .story-container .row-container .image-container {
-    padding: 1rem 0;
+    padding: 0;
     width: 100%;
   }
 }
@@ -652,7 +654,6 @@
 }
 
 .travel-section {
-  background: linear-gradient(to bottom, white 50%, #f9d9ee 50%);
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -692,64 +693,105 @@
   }
 }
 
-.once-there {
-  background: linear-gradient(to bottom, #f9d9ee 50%, white 50%);
+.once-there,
+.travel-there,
+.accomodation {
   display: flex;
   justify-content: center;
   flex-direction: column;
   padding: 2rem 15rem;
 }
 @media only screen and (max-width: 600px) {
-  .once-there {
+  .once-there,
+  .travel-there,
+  .accomodation {
     padding: 1rem;
   }
 }
-.once-there h1 {
+.once-there h1,
+.travel-there h1,
+.accomodation h1 {
   font-family: "Passions Conflict", cursive;
   font-size: 6rem;
 }
 @media only screen and (max-width: 600px) {
-  .once-there h1 {
-    font-size: 5rem;
+  .once-there h1,
+  .travel-there h1,
+  .accomodation h1 {
+    font-size: 4rem;
   }
 }
-.once-there p {
+.once-there p,
+.travel-there p,
+.accomodation p {
   line-height: 1rem;
 }
 @media only screen and (max-width: 600px) {
-  .once-there p {
+  .once-there p,
+  .travel-there p,
+  .accomodation p {
     font-size: 1rem;
-    line-height: 1rem;
+    line-height: 1.5rem;
   }
 }
-.once-there .places-to-see {
+.once-there .places-to-see,
+.once-there .places-to-stay,
+.travel-there .places-to-see,
+.travel-there .places-to-stay,
+.accomodation .places-to-see,
+.accomodation .places-to-stay {
   display: flex;
   flex-direction: row;
   gap: 2rem;
 }
 @media only screen and (max-width: 600px) {
-  .once-there .places-to-see {
+  .once-there .places-to-see,
+  .once-there .places-to-stay,
+  .travel-there .places-to-see,
+  .travel-there .places-to-stay,
+  .accomodation .places-to-see,
+  .accomodation .places-to-stay {
     flex-direction: column;
   }
 }
-.once-there .places-to-see .places-card {
+.once-there .places-to-see .places-card,
+.once-there .places-to-stay .places-card,
+.travel-there .places-to-see .places-card,
+.travel-there .places-to-stay .places-card,
+.accomodation .places-to-see .places-card,
+.accomodation .places-to-stay .places-card {
   max-width: 33%;
-  margin-top: 5rem;
+  margin-top: 2rem;
 }
 @media only screen and (max-width: 600px) {
-  .once-there .places-to-see .places-card {
+  .once-there .places-to-see .places-card,
+  .once-there .places-to-stay .places-card,
+  .travel-there .places-to-see .places-card,
+  .travel-there .places-to-stay .places-card,
+  .accomodation .places-to-see .places-card,
+  .accomodation .places-to-stay .places-card {
     margin-top: 2rem;
     max-width: 100%;
   }
 }
-.once-there .places-to-see .places-card img {
+.once-there .places-to-see .places-card img,
+.once-there .places-to-stay .places-card img,
+.travel-there .places-to-see .places-card img,
+.travel-there .places-to-stay .places-card img,
+.accomodation .places-to-see .places-card img,
+.accomodation .places-to-stay .places-card img {
   height: 300px;
   -o-object-fit: cover;
      object-fit: cover;
   margin-bottom: 1rem;
   width: 100%;
 }
-.once-there .places-to-see .places-card p.lead {
+.once-there .places-to-see .places-card p.lead,
+.once-there .places-to-stay .places-card p.lead,
+.travel-there .places-to-see .places-card p.lead,
+.travel-there .places-to-stay .places-card p.lead,
+.accomodation .places-to-see .places-card p.lead,
+.accomodation .places-to-stay .places-card p.lead {
   font-weight: 500;
   padding: 1rem 0;
 }
@@ -760,14 +802,15 @@
   flex-direction: column;
 }
 .response-container .rsvp-container {
-  background: #99b0df;
-  border-radius: 10px;
-  margin: auto;
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  margin: 2rem auto;
   padding: 2rem;
   position: relative;
-  transform: translateY(-5vh);
   text-align: center;
-  width: 40vw;
+  width: 60vw;
 }
 .response-container .rsvp-container h2 {
   font-family: "Montserrat", sans-serif;
@@ -803,6 +846,7 @@
   display: flex;
   justify-content: center;
   flex-direction: column;
+  width: 50%;
 }
 .response-container .rsvp-container form input,
 .response-container .rsvp-container form textarea,

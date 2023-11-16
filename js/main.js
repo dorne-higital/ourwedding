@@ -73,3 +73,18 @@ function openGallery () {
         }
     });
 }
+
+function showRSVPForm() {
+  const password = document.getElementById('passwordInput').value;
+
+  // Check the entered password and show the respective form
+  if (password === 'daypassword') {
+      document.querySelector('.day-guests').style.display = 'block';
+      document.querySelector('.evening-guests').style.display = 'none';
+  } else if (password === 'eveningpassword') {
+      document.querySelector('.day-guests').style.display = 'none';
+      document.querySelector('.evening-guests').style.display = 'block';
+  } else {
+      alert('Incorrect password. Please try again.');
+  }
+}
