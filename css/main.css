@@ -378,6 +378,8 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
+  -o-object-fit: cover;
+     object-fit: cover;
   padding: 8rem 5rem;
   position: relative;
 }
