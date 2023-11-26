@@ -383,8 +383,7 @@ $border-radius: 8px;
         justify-content: center;
         margin-bottom: 0.5rem;
 
-        @media (max-width:600px) {
-        }
+        @media (max-width:600px) {}
     }
 
     #countdown {
@@ -882,7 +881,7 @@ $border-radius: 8px;
 
     .rsvp-container {
         align-items: center;
-        // background: $base-blue;
+        background: $base-blue;
         display: flex;
         flex-direction: row;
         justify-content: space-around;
@@ -928,11 +927,45 @@ $border-radius: 8px;
             }
         }
 
+        #password-container {
+
+            input {
+                border: none;
+                background: white;
+                font-family: 'Montserrat', sans-serif;
+                padding: 1rem 0.6rem;
+                margin: 0.5rem 0;
+                width: 100%;
+            }
+
+            button {
+                background: $deep-blue;
+                border: none;
+                color: white;
+                cursor: pointer;
+                padding: 1rem;
+                margin: 0.5rem 0;
+                width: 100%;
+            }
+        }
+
         form {
             display: flex;
             justify-content: center;
             flex-direction: column;
+            text-align: left;
             width: 50%;
+
+            .label-input {
+                background: white;
+                border-bottom: 2px solid $base-blue;
+                border-right: 2px solid $base-blue;
+                font-size: .75rem;
+                padding: 2px 10px;
+                position: relative;
+                top: 1.2rem;
+                width: fit-content;
+            }
 
             input,
             textarea,
@@ -943,6 +976,10 @@ $border-radius: 8px;
                 padding: 1rem 0.6rem;
                 margin: 0.5rem 0;
                 width: 100%;
+
+                &:focus-visible {
+                    outline: none;
+                }
             }
 
             p {
@@ -958,7 +995,7 @@ $border-radius: 8px;
                 cursor: pointer;
                 padding: 1rem;
                 margin: 0.5rem 0;
-
+                width: 100%;
             }
 
         }

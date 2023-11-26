@@ -39,10 +39,10 @@
                     </div>
                     <ul class="desktop_nav">
                         <li><a href="index.html">Home</a></li>
-                        <!-- <li><a href="wedding.html">The Big Day</a></li> -->
+                        <li><a href="wedding.html">The Big Day</a></li>
                         <li><a href="story.html">Our Story</a></li>
                         <li><a href="travel.html">Travel & Accomodation</a></li>
-                        <!-- <li><a href="rsvp.html">RSVP</a></li> -->
+                        <li><a href="rsvp.html">RSVP</a></li>
                     </ul>
                     <ul class="mobile_nav" id="nav_menu">
                         <section class="mobile_nav_sect">
@@ -50,12 +50,12 @@
                                 >&times;</span
                             >
                             <li><a href="index.html">Home</a></li>
-                            <!-- <li><a href="wedding.html">The Big Day</a></li> -->
+                            <li><a href="wedding.html">The Big Day</a></li>
                             <li><a href="story.html">Our Story</a></li>
                             <li>
                                 <a href="travel.html">Travel & Accomodation</a>
                             </li>
-                            <!-- <li><a href="rsvp.html">RSVP</a></li> -->
+                            <li><a href="rsvp.html">RSVP</a></li>
                         </section>
                     </ul>
                 </nav>
@@ -64,13 +64,15 @@
             <section class="heading-container">
                 <h1>RSVP</h1>
                 <p class="lead">We would love for you to join us</p>
-                <p class="lead">So please let us know, whether it's a yes or no</p>
+                <p class="lead">
+                    So please let us know, whether it's a yes or no
+                </p>
             </section>
 
             <!-- RSVP section -->
             <div class="response-container">
                 <section class="rsvp-container">
-                    <iframe 
+                    <!-- <iframe 
                         src="https://docs.google.com/forms/d/e/1FAIpQLSfyNW7GKkMtaf1kO1p72R0pcObH5R7JDjtHJNXrDgX8jGYCig/viewform?embedded=true" 
                         width="640" 
                         height="942" 
@@ -79,8 +81,104 @@
                         marginwidth="0"
                     >
                         Loading....
-                    </iframe>
+                    </iframe> -->
+                    <!-- <h1>RSVP Page</h1> -->
+                    <div id="password-container">
+                        <input
+                            type="password"
+                            id="passwordInput"
+                            placeholder="Enter password"
+                        />
+                        <button onclick="checkPassword()">Submit</button>
+                    </div>
+                    <form action="mail.php" method="POST" id="form1" style="display: none">
+                        <!-- <h2>Day guest</h2> -->
+                        <!-- Your form fields here -->
+                        <label class="label-input" for="name">Name of Guests<sup>*</sup></label>
+                        <input
+                            type="text"
+                            name="name"
+                            id="name"
+                            class="input-field"
+                            placeholder=""
+                            required
+                        />
 
+                        <label class="label-input" for="phone">Contact number<sup>*</sup></label>
+                        <input
+                            type="number"
+                            name="phone"
+                            id="phone"
+                            class="input-field"
+                            placeholder=" "
+                            required
+                        />
+
+                        <label class="label-input" for="attending">RSVP<sup>*</sup></label>
+                        <select
+                            name="attending"
+                            id="attending"
+                            placeholder=""
+                            required
+                            onchange="rsvp()"
+                        >
+                            <option value="" disabled selected>
+                                RSVP here
+                            </option>
+                            <option value="yes">I would love to come</option>
+                            <option value="no">Sadly I can not make it</option>
+                        </select>
+
+                        <section
+                            id="accepted"
+                            class="accepted-section"
+                            style="display: none"
+                        >
+
+                            <label class="label-input" for="message">Anything we need to know? (Dietary requirements)</label>
+                            <textarea
+                                name="message"
+                                cols="30"
+                                rows="5"
+                                placeholder=""
+                            ></textarea>
+
+                            <p>
+                                We would also love for you to have a say on what
+                                music plays to get you on the dancefloor. Please
+                                feel free to suggest 1 or 2 options below:
+                            </p>
+
+                            <label class="label-input" for="songone">Name of first song choice</label>
+                            <input
+                                type="text"
+                                v-model="songone"
+                                name="songone"
+                                placeholder="Your first song choice"
+                            />
+
+                            <label class="label-input" for="songtwo">Name of second song choice</label>
+                            <input
+                                type="text"
+                                v-model="songtwo"
+                                name="songtwo"
+                                placeholder="Your second song choice"
+                            />
+                        </section>
+                        <button type="submit" value="Send">RSVP</button>
+                    </form>
+                    <div id="form2" style="display: none">
+                        <!-- Form 2 -->
+                        <h2>Evening</h2>
+                        <!-- Your form fields here -->
+                        <input type="text" name="" id="" placeholder="Name" />
+                        <input
+                            type="phone"
+                            name=""
+                            id=""
+                            placeholder="Contact Number"
+                        />
+                    </div>
                 </section>
             </div>
 
@@ -92,11 +190,65 @@
 
             <script>
                 function rsvp() {
-                    const select = document.getElementById('attending');
-                    const accepted = document.getElementById('accepted');
-                    accepted.style.display = attending.value == "yes" ? "block" : "none";
+                    const select = document.getElementById("attending");
+                    const accepted = document.getElementById("accepted");
+                    accepted.style.display =
+                        attending.value == "yes" ? "block" : "none";
+
+                    const rejected = document.getElementById("rejected");
+                    rejected.style.display =
+                        attending.value == "yes" ? "block" : "none";
                 }
-                
+
+                function checkPassword() {
+                    var password =
+                        document.getElementById("passwordInput").value;
+
+                    // Replace these passwords with your desired passwords
+                    var password1 = "MRANDMRS";
+                    var password2 = "THEHORNES";
+
+                    if (password === password1) {
+                        document.getElementById("form1").style.display =
+                            "block";
+                        document.getElementById("form2").style.display = "none";
+                        document.getElementById(
+                            "password-container"
+                        ).style.display = "none";
+                    } else if (password === password2) {
+                        document.getElementById("form1").style.display = "none";
+                        document.getElementById("form2").style.display =
+                            "block";
+                        document.getElementById(
+                            "password-container"
+                        ).style.display = "none";
+                    } else {
+                        alert(
+                            "Oops, looks like that password isn't quite right. Please try again, making sure you copy it like for like off the invite!"
+                        );
+                    }
+                }
+
+                // function toggleLabelVisibility(inputId) {
+                //     var inputField = document.getElementById(inputId);
+                //     var label = document.querySelector(
+                //         'label[for="' + inputId + '"]'
+                //     );
+
+                //     if (inputField.value.length > 0) {
+                //         label.style.display = "block"; // Show label if input has text
+                //     } else {
+                //         label.style.display = "none"; // Hide label if input is empty
+                //     }
+                // }
+
+                // // Add event listeners to all input fields with the class 'input-field'
+                // var inputFields = document.querySelectorAll(".input-field");
+                // inputFields.forEach(function (input) {
+                //     input.addEventListener("input", function () {
+                //         toggleLabelVisibility(input.id);
+                //     });
+                // });
             </script>
         </body>
     </html>
