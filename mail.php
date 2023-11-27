@@ -17,7 +17,7 @@ try {
     //Content
     $mail->isHTML(true);                                  //Set email format to HTML
     $mail->Subject = 'New online RSVP';
-    $mail->Body    = 'Name:'.$_POST['name'].'<br /> Phone:'.$_POST['phone'].'<br /> Message:'.$_POST['attending'].'<br />';
+    $mail->Body    = 'Name:'.$_POST['name'].'<br /> Phone:'.$_POST['phone'].'<br /> Message:'.$_POST['attending'].'<br />'.'<br /> Details:'.$_POST['message'].'<br /> Song 1:'.$_POST['songone'].'<br /> Song 2:'.$_POST['songtwo'];
     $mail->AltBody = 'This is the body in plain text for non-HTML mail clients';
 
     $mail->send();
