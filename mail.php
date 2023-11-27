@@ -10,9 +10,9 @@ $mail = new PHPMailer(true);
 
 try {
     //Recipients
-    $mail->setFrom('damaho92@gmail.com', 'NOREPLY');
+    $mail->setFrom('responses@faux-horne-wedding.co.uk', 'NOREPLY');
     // $mail->addAddress('d.horne92@live.co.uk');
-    $mail->addAddress('damaho92@gmail.com');
+    $mail->addAddress('responses@faux-horne-wedding.co.uk');
 
     //Content
     $mail->isHTML(true);                                  //Set email format to HTML
