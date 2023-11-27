@@ -72,17 +72,6 @@
             <!-- RSVP section -->
             <div class="response-container">
                 <section class="rsvp-container">
-                    <!-- <iframe 
-                        src="https://docs.google.com/forms/d/e/1FAIpQLSfyNW7GKkMtaf1kO1p72R0pcObH5R7JDjtHJNXrDgX8jGYCig/viewform?embedded=true" 
-                        width="640" 
-                        height="942" 
-                        frameborder="0" 
-                        marginheight="0" 
-                        marginwidth="0"
-                    >
-                        Loading....
-                    </iframe> -->
-                    <!-- <h1>RSVP Page</h1> -->
                     <div id="password-container">
                         <input
                             type="password"
@@ -91,10 +80,10 @@
                         />
                         <button onclick="checkPassword()">Submit</button>
                     </div>
+
                     <form action="mail.php" method="POST" id="form1" style="display: none">
-                        <!-- <h2>Day guest</h2> -->
-                        <!-- Your form fields here -->
                         <label class="label-input" for="name">Name of Guests<sup>*</sup></label>
+
                         <input
                             type="text"
                             name="name"
@@ -105,6 +94,7 @@
                         />
 
                         <label class="label-input" for="phone">Contact number<sup>*</sup></label>
+
                         <input
                             type="number"
                             name="phone"
@@ -115,6 +105,7 @@
                         />
 
                         <label class="label-input" for="attending">RSVP<sup>*</sup></label>
+
                         <select
                             name="attending"
                             id="attending"
@@ -136,6 +127,7 @@
                         >
 
                             <label class="label-input" for="message">Anything we need to know? (Dietary requirements)</label>
+
                             <textarea
                                 name="message"
                                 cols="30"
@@ -150,6 +142,7 @@
                             </p>
 
                             <label class="label-input" for="songone">Name of first song choice</label>
+
                             <input
                                 type="text"
                                 v-model="songone"
@@ -158,6 +151,7 @@
                             />
 
                             <label class="label-input" for="songtwo">Name of second song choice</label>
+
                             <input
                                 type="text"
                                 v-model="songtwo"
@@ -165,20 +159,9 @@
                                 placeholder="Your second song choice"
                             />
                         </section>
+
                         <button type="submit" value="Send">RSVP</button>
                     </form>
-                    <div id="form2" style="display: none">
-                        <!-- Form 2 -->
-                        <h2>Evening</h2>
-                        <!-- Your form fields here -->
-                        <input type="text" name="" id="" placeholder="Name" />
-                        <input
-                            type="phone"
-                            name=""
-                            id=""
-                            placeholder="Contact Number"
-                        />
-                    </div>
                 </section>
             </div>
 
@@ -204,21 +187,12 @@
                     var password =
                         document.getElementById("passwordInput").value;
 
-                    // Replace these passwords with your desired passwords
-                    var password1 = "MRANDMRS";
-                    var password2 = "THEHORNES";
+                    var password1 = "THEHORNES";
 
                     if (password === password1) {
                         document.getElementById("form1").style.display =
                             "block";
                         document.getElementById("form2").style.display = "none";
-                        document.getElementById(
-                            "password-container"
-                        ).style.display = "none";
-                    } else if (password === password2) {
-                        document.getElementById("form1").style.display = "none";
-                        document.getElementById("form2").style.display =
-                            "block";
                         document.getElementById(
                             "password-container"
                         ).style.display = "none";
@@ -228,27 +202,6 @@
                         );
                     }
                 }
-
-                // function toggleLabelVisibility(inputId) {
-                //     var inputField = document.getElementById(inputId);
-                //     var label = document.querySelector(
-                //         'label[for="' + inputId + '"]'
-                //     );
-
-                //     if (inputField.value.length > 0) {
-                //         label.style.display = "block"; // Show label if input has text
-                //     } else {
-                //         label.style.display = "none"; // Hide label if input is empty
-                //     }
-                // }
-
-                // // Add event listeners to all input fields with the class 'input-field'
-                // var inputFields = document.querySelectorAll(".input-field");
-                // inputFields.forEach(function (input) {
-                //     input.addEventListener("input", function () {
-                //         toggleLabelVisibility(input.id);
-                //     });
-                // });
             </script>
         </body>
     </html>
