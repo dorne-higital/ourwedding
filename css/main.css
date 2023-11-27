@@ -869,6 +869,11 @@
   text-align: left;
   width: 50%;
 }
+@media only screen and (max-width: 600px) {
+  .response-container .rsvp-container form {
+    width: 100%;
+  }
+}
 .response-container .rsvp-container form .label-input {
   background: white;
   border-bottom: 2px solid #99b0df;
