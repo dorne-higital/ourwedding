@@ -73,6 +73,11 @@
   width: 90vw;
   z-index: 99;
 }
+.nav_section .rsvp-button {
+  background: #f9d9ee;
+  color: #a6277d;
+  padding: 0.6rem 1.2rem;
+}
 @media only screen and (max-width: 600px) {
   .nav_section {
     margin: 0;

@@ -101,6 +101,12 @@ $border-radius: 8px;
     width: 90vw;
     z-index: 99;
 
+    .rsvp-button {
+        background: $base-pink;
+        color: $deep-pink;
+        padding: .6rem 1.2rem;
+    }
+
     @media only screen and (max-width: 600px) {
         margin: 0;
         padding: 1rem 0;
