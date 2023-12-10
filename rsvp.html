@@ -61,110 +61,237 @@
                 </nav>
             </section>
 
-            <section class="heading-container">
+            <!-- <section class="heading-container">
                 <h1>RSVP</h1>
                 <p class="lead">We would love for you to join us</p>
                 <p class="lead">
                     So please let us know, whether it's a yes or no
                 </p>
-            </section>
+            </section> -->
 
             <!-- RSVP section -->
-            <div class="response-container">
-                <section class="rsvp-container">
-                    <div id="password-container">
-                        <input
-                            type="password"
-                            id="passwordInput"
-                            placeholder="Enter password"
-                        />
-                        <button onclick="checkPassword()">Submit</button>
-                    </div>
 
-                    <form action="mail.php" method="POST" id="form1" style="display: none">
-                        <label class="label-input" for="name">Name of Guests<sup>*</sup></label>
+            <section class="main-content-rsvp">
+                <div class="response-container">
+                    <section class="rsvp-container">
+                        <div id="rsvp-section">
+                            <h1>Emma</h1>
+                            <h4>&</h4>
+                            <h1>Daniel</h1>
 
-                        <input
-                            type="text"
-                            name="name"
-                            id="name"
-                            class="input-field"
-                            placeholder=""
-                            required
-                        />
+                            <div class="invite-block">
+                                <section class="top">
+                                    <span class="underline"> </span>
+                                    <span>
+                                        <p>Dec</p>
+                                    </span>
+                                    <span class="underline"> </span>
+                                </section>
+                                <section class="bottom">
+                                    <span class="underline">
+                                        <p>Friday</p>
+                                    </span>
+                                    <span>
+                                        <h1>20</h1>
+                                    </span>
+                                    <span class="underline">
+                                        <p>2024</p>
+                                    </span>
+                                </section>
+                            </div>
 
-                        <label class="label-input" for="phone">Contact number<sup>*</sup></label>
+                            <p class="invite">
+                                Broadoaks Country House, Troutbeck, The Lake
+                                District, LA23 1LA
+                            </p>
+                        </div>
+                        <p id="rsvp-cta" class="invite">
+                            <a href="" onclick="toggleRSVP(event)"
+                                >Please RSVP here</a
+                            >
+                        </p>
+                        <div id="password-container">
+                            <input
+                                type="password"
+                                id="passwordInput"
+                                placeholder="Enter password"
+                                oninput="validateInput()"
+                            />
+                            <button
+                                id="rsvpButton"
+                                onclick="checkPassword()"
+                                disabled
+                            >
+                                RSVP
+                            </button>
+                        </div>
 
-                        <input
-                            type="number"
-                            name="phone"
-                            id="phone"
-                            class="input-field"
-                            placeholder=" "
-                            required
-                        />
-
-                        <label class="label-input" for="attending">RSVP<sup>*</sup></label>
-
-                        <select
-                            name="attending"
-                            id="attending"
-                            placeholder=""
-                            required
-                            onchange="rsvp()"
-                        >
-                            <option value="" disabled selected>
-                                RSVP here
-                            </option>
-                            <option value="yes">I would love to come</option>
-                            <option value="no">Sadly I can not make it</option>
-                        </select>
-
-                        <section
-                            id="accepted"
-                            class="accepted-section"
+                        <form
+                            action="mail.php"
+                            method="POST"
+                            id="form1"
                             style="display: none"
                         >
+                            <label class="label-input" for="name"
+                                >Name of Guests<sup>*</sup></label
+                            >
 
-                            <label class="label-input" for="message">Anything we need to know? (Dietary requirements)</label>
-
-                            <textarea
-                                name="message"
-                                cols="30"
-                                rows="5"
+                            <input
+                                type="text"
+                                name="name"
+                                id="name"
+                                class="input-field"
                                 placeholder=""
-                            ></textarea>
-
-                            <p>
-                                We would also love for you to have a say on what
-                                music plays to get you on the dancefloor. Please
-                                feel free to suggest 1 or 2 options below:
-                            </p>
-
-                            <label class="label-input" for="songone">Name of first song choice</label>
-
-                            <input
-                                type="text"
-                                v-model="songone"
-                                name="songone"
-                                placeholder="Your first song choice"
+                                required
                             />
 
-                            <label class="label-input" for="songtwo">Name of second song choice</label>
+                            <label class="label-input" for="phone"
+                                >Contact number<sup>*</sup></label
+                            >
 
                             <input
-                                type="text"
-                                v-model="songtwo"
-                                name="songtwo"
-                                placeholder="Your second song choice"
+                                type="number"
+                                name="phone"
+                                id="phone"
+                                class="input-field"
+                                placeholder=""
+                                required
                             />
-                        </section>
 
-                        <button type="submit" value="Send">RSVP</button>
-                    </form>
+                            <label class="label-input" for="attending"
+                                >RSVP<sup>*</sup></label
+                            >
 
-                </section>
-            </div>
+                            <select
+                                name="attending"
+                                id="attending"
+                                placeholder=""
+                                required
+                                onchange="rsvp()"
+                            >
+                                <option value="" disabled selected>
+                                    RSVP here
+                                </option>
+                                <option value="yes">
+                                    I would love to come
+                                </option>
+                                <option value="no">
+                                    Sadly I can not make it
+                                </option>
+                            </select>
+
+                            <section
+                                id="accepted"
+                                class="accepted-section"
+                                style="display: none"
+                            >
+                                <label class="label-input" for="message"
+                                    >Anything we need to know? (Dietary
+                                    requirements)</label
+                                >
+
+                                <textarea
+                                    name="message"
+                                    cols="30"
+                                    rows="5"
+                                    placeholder=""
+                                ></textarea>
+
+                                <p>
+                                    We would also love for you to have a say on
+                                    what music plays to get you on the
+                                    dancefloor. Please feel free to suggest 1 or
+                                    2 options below:
+                                </p>
+
+                                <label class="label-input" for="songone"
+                                    >Name of first song choice</label
+                                >
+
+                                <input
+                                    type="text"
+                                    v-model="songone"
+                                    name="songone"
+                                    placeholder=""
+                                />
+
+                                <label class="label-input" for="songtwo"
+                                    >Name of second song choice</label
+                                >
+
+                                <input
+                                    type="text"
+                                    v-model="songtwo"
+                                    name="songtwo"
+                                    placeholder=""
+                                />
+                            </section>
+
+                            <button type="submit" value="Send">RSVP</button>
+                        </form>
+                    </section>
+                </div>
+
+                <div class="faq-container">
+                    <div class="question-container">
+                        <h5>What if I don't RSVP?</h5>
+                        <p>
+                            To help us plan accordingly, we ask that you RSVP no
+                            later than the date specified on your invitation. If
+                            we do not receive your RSVP by the set date, we will
+                            have to mark you as "Not Attending". If you are
+                            having any issues RSVP'ing, please reach out on the
+                            number provided on the invite and we can help.
+                        </p>
+                    </div>
+                    <div class="question-container">
+                        <h5>Can I bring a plus one?</h5>
+                        <p>
+                            Our wedding is invitation only. If you have a plus
+                            one specified on your invitation, then you are
+                            welcome to bring a plus one. Unfortunately, we can
+                            not accomodate other extra guests due to venue
+                            capacity.
+                        </p>
+                    </div>
+                    <div class="question-container">
+                        <h5>When should I arrive?</h5>
+                        <p>
+                            We recommend arriving 15-20 minutes before the start
+                            of the ceremony. If late, we kindly ask you wait in
+                            the music room or bar area to minimise any
+                            disruption to the ceremony. If arriving for the
+                            evening, please arrive promptly for 18:00.
+                        </p>
+                    </div>
+                    <div class="question-container">
+                        <h5>Do you have a registry? Can I bring a gift?</h5>
+                        <p>
+                            You being with us to celebrate is enough, no gift is
+                            needed. However, should you wish to bring something,
+                            a contribution to our honeymoon would be greatly
+                            appreciated.
+                        </p>
+                    </div>
+                    <div class="question-container">
+                        <h5>Are children invited?</h5>
+                        <p>
+                            As much as we would love to accomodate your little
+                            ones, we have limited space at our venue. We have
+                            decided to keep children to strictly family, unless
+                            previously confirmed with the bride or groom.
+                        </p>
+                    </div>
+                    <div class="question-container">
+                        <h5>Are there any colours I should avoid wearing?</h5>
+                        <p>
+                            Please refrain from wearing colours traditionally
+                            reserved for the bride. These include white, ivory
+                            or cream.
+                        </p>
+                    </div>
+                </div>
+            </section>
 
             <!-- Footer -->
 
@@ -191,13 +318,41 @@
                     var password1 = "THEHORNES";
 
                     if (password === password1) {
-                        document.getElementById("form1").style.display = "block";
-                        document.getElementById("password-container").style.display = "none";
+                        document.getElementById("form1").style.display =
+                            "block";
+                        document.getElementById(
+                            "password-container"
+                        ).style.display = "none";
+                        document.getElementById("rsvp-section").style.display =
+                            "none";
                     } else {
                         alert(
                             "Oops, looks like that password isn't quite right. Please try again, making sure you copy it like for like off the invite!"
                         );
                     }
+                }
+
+                function validateInput() {
+                    var passwordInput =
+                        document.getElementById("passwordInput");
+                    var rsvpButton = document.getElementById("rsvpButton");
+
+                    if (passwordInput.value.length > 0) {
+                        rsvpButton.disabled = false; // Enable the button if text is inputted
+                    } else {
+                        rsvpButton.disabled = true; // Disable the button if no text is inputted
+                    }
+                }
+
+                function toggleRSVP() {
+                    event.preventDefault();
+
+                    var rsvp = document.getElementById("rsvp-cta");
+                    var passwordContainer =
+                        document.getElementById("password-container");
+
+                    rsvp.style.display = "none";
+                    passwordContainer.style.display = "flex";
                 }
             </script>
         </body>

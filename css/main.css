@@ -1,6 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Passions+Conflict&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;400;600;900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Dynalight&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600&display=swap");
 * {
   box-sizing: border-box;
   font-family: "Montserrat", sans-serif;
@@ -798,42 +799,170 @@
   padding: 1rem 0;
 }
 
-.response-container {
+.main-content-rsvp {
   display: flex;
+  gap: 2rem;
   justify-content: center;
+  margin-top: 2rem;
+  padding: 0 5rem;
+  width: 100%;
+}
+@media only screen and (max-width: 600px) {
+  .main-content-rsvp {
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+  }
+}
+
+.faq-container {
+  display: flex;
+  flex: 1;
   flex-direction: column;
+  gap: 0.8rem;
+  margin-bottom: 2rem;
+  padding-top: 2rem;
+}
+@media only screen and (max-width: 600px) {
+  .faq-container {
+    padding: 0 0.5rem;
+  }
+}
+.faq-container .question-container {
+  box-shadow: 1px 1px 2px 0px #06073f;
+  padding: 1rem;
+}
+
+.response-container {
+  background-image: url("/img/rsvp-bg.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  border: 5px solid white;
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+  width: 35vw;
+}
+@media only screen and (max-width: 600px) {
+  .response-container {
+    width: 100vw;
+  }
+}
+.response-container::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(43, 43, 43, 0.43);
+  -webkit-backdrop-filter: blur(5px);
+          backdrop-filter: blur(5px);
 }
 .response-container .rsvp-container {
   align-items: center;
-  background: #99b0df;
   display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  margin: 2rem auto;
+  flex-direction: column;
+  justify-content: center;
+  height: 800px;
   padding: 2rem;
   position: relative;
   text-align: center;
-  width: 60vw;
+  width: 100%;
 }
-.response-container .rsvp-container h2 {
-  font-family: "Montserrat", sans-serif;
-  font-weight: 300;
-  letter-spacing: 0.2rem;
+.response-container .rsvp-container #rsvp-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 .response-container .rsvp-container h1 {
   color: white;
-  font-family: "Passions Conflict", cursive;
-  font-size: 5rem;
+  font-family: "Dancing Script", cursive;
+  font-size: 8rem;
   font-weight: 100;
-  line-height: 3rem;
+  line-height: 5rem;
   margin-bottom: 1rem;
 }
-.response-container .rsvp-container hr {
-  border: 1px solid white;
-  border-style: dashed;
-  margin: 2rem 0 1rem;
+@media only screen and (max-width: 600px) {
+  .response-container .rsvp-container h1 {
+    font-size: 6rem;
+  }
+}
+.response-container .rsvp-container h4 {
+  color: white;
+  font-size: 3rem;
+  font-family: "Dancing Script", cursive;
+}
+.response-container .rsvp-container p.invite {
+  color: white;
+  font-size: 0.8rem;
+  font-weight: 500;
+  letter-spacing: 2px;
+  padding: 1rem 0;
+  text-shadow: #000 0px 0px 5px;
+  text-transform: uppercase;
+  width: 70%;
+}
+@media only screen and (max-width: 600px) {
+  .response-container .rsvp-container p.invite {
+    width: 100%;
+  }
+}
+.response-container .rsvp-container p.invite a {
+  border-bottom: 1px solid;
+  color: white;
+  font-size: 1.1rem;
+  font-weight: 500;
+  padding-bottom: 0.2rem;
+  text-decoration: none;
+}
+.response-container .rsvp-container p.invite a:hover {
+  padding-bottom: 0.3rem;
+}
+.response-container .rsvp-container .invite-block {
+  display: flex;
+  flex-direction: column;
+  padding-top: 1rem;
+}
+.response-container .rsvp-container .invite-block .top,
+.response-container .rsvp-container .invite-block .bottom {
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.response-container .rsvp-container .invite-block .top span,
+.response-container .rsvp-container .invite-block .bottom span {
+  font-size: 1.4rem;
+  padding-bottom: 1rem;
+  text-transform: uppercase;
+  width: 7rem;
+}
+.response-container .rsvp-container .invite-block .top span p,
+.response-container .rsvp-container .invite-block .bottom span p {
+  color: white;
+  line-height: 2rem;
+}
+.response-container .rsvp-container .invite-block .top span p, .response-container .rsvp-container .invite-block .top span h1,
+.response-container .rsvp-container .invite-block .bottom span p,
+.response-container .rsvp-container .invite-block .bottom span h1 {
+  margin: 0;
+  padding: 0;
+}
+.response-container .rsvp-container .invite-block .top .underline,
+.response-container .rsvp-container .invite-block .bottom .underline {
+  border-bottom: 1px solid white;
+  height: 3rem;
+}
+.response-container .rsvp-container .invite-block .top h1,
+.response-container .rsvp-container .invite-block .bottom h1 {
+  font-size: 4rem;
 }
 .response-container .rsvp-container .rsvp-details {
+  color: white;
   display: flex;
   justify-content: center;
 }
@@ -845,29 +974,48 @@
 .response-container .rsvp-container .rsvp-details div {
   padding: 1rem;
 }
+.response-container .rsvp-container #password-container {
+  display: none;
+}
 .response-container .rsvp-container #password-container input {
   border: none;
-  background: white;
+  border-bottom: 2px solid white;
+  background: none;
+  color: white;
   font-family: "Montserrat", sans-serif;
-  padding: 1rem 0.6rem;
+  flex-grow: 2;
+  padding: 0.5rem;
+  margin: 0.5rem 0;
+}
+.response-container .rsvp-container #password-container input::-moz-placeholder {
+  color: white;
+}
+.response-container .rsvp-container #password-container input::placeholder {
+  color: white;
+}
+.response-container .rsvp-container #password-container input:focus-visible {
+  outline: none;
+}
+.response-container .rsvp-container #password-container button {
+  background: white;
+  border: none;
+  color: #06073f;
+  cursor: pointer;
+  flex-grow: 1;
+  padding: 0.5rem;
   margin: 0.5rem 0;
   width: 100%;
 }
-.response-container .rsvp-container #password-container button {
-  background: #06073f;
-  border: none;
-  color: white;
-  cursor: pointer;
-  padding: 1rem;
-  margin: 0.5rem 0;
-  width: 100%;
+.response-container .rsvp-container #password-container button:disabled {
+  background: grey;
+  cursor: not-allowed;
 }
 .response-container .rsvp-container form {
   display: flex;
   justify-content: center;
   flex-direction: column;
   text-align: left;
-  width: 50%;
+  width: 100%;
 }
 @media only screen and (max-width: 600px) {
   .response-container .rsvp-container form {
@@ -875,11 +1023,11 @@
   }
 }
 .response-container .rsvp-container form .label-input {
-  background: white;
-  border-bottom: 2px solid #99b0df;
-  border-right: 2px solid #99b0df;
+  background: none;
+  color: white;
+  font-weight: 500;
   font-size: 0.75rem;
-  padding: 2px 10px;
+  padding: 2px 0;
   position: relative;
   top: 1.2rem;
   width: -moz-fit-content;
@@ -889,11 +1037,22 @@
 .response-container .rsvp-container form textarea,
 .response-container .rsvp-container form select {
   border: none;
-  background: white;
+  border-bottom: 2px solid white;
+  background: none;
+  color: white;
   font-family: "Montserrat", sans-serif;
-  padding: 1rem 0.6rem;
+  font-weight: 500;
+  padding: 0.5rem;
   margin: 0.5rem 0;
   width: 100%;
+}
+.response-container .rsvp-container form input::-moz-placeholder, .response-container .rsvp-container form textarea::-moz-placeholder, .response-container .rsvp-container form select::-moz-placeholder {
+  color: white;
+}
+.response-container .rsvp-container form input::placeholder,
+.response-container .rsvp-container form textarea::placeholder,
+.response-container .rsvp-container form select::placeholder {
+  color: white;
 }
 .response-container .rsvp-container form input:focus-visible,
 .response-container .rsvp-container form textarea:focus-visible,
@@ -901,23 +1060,22 @@
   outline: none;
 }
 .response-container .rsvp-container form p {
+  color: white;
+  font-size: 0.75rem;
   font-family: "Montserrat", sans-serif;
   padding: 0.6rem;
   margin: 0.5rem 0;
 }
 .response-container .rsvp-container form button {
-  background: #06073f;
+  background: white;
   border: none;
-  color: white;
+  color: #06073f;
   cursor: pointer;
-  padding: 1rem;
+  padding: 0.5rem;
   margin: 0.5rem 0;
   width: 100%;
 }
-
-@media (max-width: 600px) {
-  .response-container .rsvp-container {
-    border-radius: 5px;
-    width: 90vw;
-  }
+.response-container .rsvp-container form button:disabled {
+  background: grey;
+  cursor: not-allowed;
 }/*# sourceMappingURL=main.css.map */
