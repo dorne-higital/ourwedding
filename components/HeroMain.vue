@@ -6,7 +6,11 @@
                 <h1>Emma & Daniel</h1>
             </div>
             <div class="img-container">
-                <img src="~/assets/images/emma_dan_walk_dist.webp" alt="Hero Image">
+                <img 
+                    src="~/assets/images/emma_dan_walk_dist.webp" 
+                    alt="Image of Emma and Dan"
+                    loading="lazy"
+                >
             </div>
         </div>
     </section>
