@@ -39,7 +39,7 @@
 			v-if="showConfirmation" 
 			class="upload-confirmation"
 		>
-			<p>Files uploaded successfully, go to the gallery and view them all!</p>
+			<p>Files uploaded successfully, why not upload some more or go to the gallery and view them all!</p>
 			
 			<nuxt-link
 				to="/gallery"
@@ -262,10 +262,6 @@
 			gap: .5rem;
             padding: 2rem;
 			text-align: center;
-
-            p {
-                color: $color-2;
-            }
 
             a {
                 padding: 1rem 2rem;
