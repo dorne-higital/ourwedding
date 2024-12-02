@@ -189,13 +189,13 @@
 		padding: 2rem 1rem;
 		border-radius: 8px;
 		text-align: center;
-		height: 90vh;
+		height: 90dvh;
 
 		/* Main modal image */
 		img {
 			border-radius: 8px;
 			max-width: fit-content;
-			max-height: 60vh;
+			max-height: 60dvh;
 			object-fit: contain;
 			margin: 3rem auto 0;
 			width: 100%;
