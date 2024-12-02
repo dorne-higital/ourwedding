@@ -71,7 +71,7 @@
 	import PageHero from '~/components/PageHero.vue';
 	import Text1Col from '~/components/Text1Col.vue';
 	import FaqAccordion from '~/components/FaqAccordion.vue';
-	import imageSrc from '~/assets/images/emma_dan_sat_tree.jpg';
+	import imageSrc from '~/assets/images/emma_dan_sat_tree.webp';
 
 	export default {
 		components: {

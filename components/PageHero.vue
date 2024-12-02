@@ -9,7 +9,9 @@
             <div class="img-container">
                 <img 
                     :src="content.image.src" 
-                    :alt="content.image.alt">
+                    :alt="content.image.alt"
+                    loading="lazy"
+                />
             </div>
         </div>
     </section>
@@ -84,8 +86,9 @@
             img {
                 clip-path: polygon(100% 0, 100% 90%, 50% 100%, 0 90%, 0 0);
                 height: 100%;
+                max-width: 100%;
+                min-width: 100%;
                 object-fit: cover;
-                width: 100%;
 
                 @media only screen and (max-width: 600px) {
                     clip-path: polygon(100% 0, 100% 95%, 50% 100%, 0 95%, 0 0);

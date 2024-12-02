@@ -20,7 +20,7 @@
 <script>
 	import ImageUploader from '~/components/ImageUploader.vue';
 	import PageHero from '~/components/PageHero.vue';
-	import imageSrc from '~/assets/images/emma_dan_walk_close.jpg';
+	import imageSrc from '~/assets/images/emma_dan_walk_close.webp';
 
 	export default {
 		components: {
