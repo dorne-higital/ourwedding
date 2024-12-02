@@ -260,7 +260,7 @@
 			justify-content: center;
 			flex-direction: column;
 			gap: .5rem;
-            padding: 2rem;
+            padding: 2rem 0;
 			text-align: center;
 
             a {
