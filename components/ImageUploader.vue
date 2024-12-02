@@ -269,7 +269,7 @@
 
             a {
                 padding: 1rem 2rem;
-                background-color: $color-2;
+                background-color: #2758bd;
                 color: #fff;
                 border: none;
                 border-radius: .5rem;

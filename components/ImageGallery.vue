@@ -1,5 +1,22 @@
 <template>
 	<div :class="[componentName]">
+
+		<div 
+			v-if="images?.length < 1"
+			class="gallery-message"
+		>
+			<h2>Oops, looks like no images have been uploaded!</h2>
+
+			<p>Use the below to upload your pictures</p>
+			
+			<nuxt-link
+				to="/upload"
+				title="Go to the image upload page"
+			>
+				Upload images
+			</nuxt-link>
+		</div>
+
 		<div class="gallery">
 			<div 
 				v-for="(image, index) in images" 
@@ -135,6 +152,31 @@
 
 .image-gallery {
   z-index: 99;
+
+  .gallery-message {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		flex-direction: column;
+		gap: .5rem;
+		padding: 2rem;
+		text-align: center;
+
+	a {
+		padding: 1rem 2rem;
+		background-color: #2758bd;
+		color: #fff;
+		border: none;
+		border-radius: .5rem;
+		cursor: pointer;
+		transition: background-color 0.3s;
+		width: 100%;
+
+		&:hover {
+			background-color: #2758bd;
+		}
+	}
+  }
 
 	.gallery {
 		display: grid;
