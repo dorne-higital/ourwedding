@@ -28,31 +28,23 @@
 			</div>
 		</div>
 
-		<div v-if="isModalOpen" class="modal" @click="closeModal">
+		<div
+			v-if="isModalOpen" 
+			class="modal" 
+			@click="closeModal"
+		>
 			<span
 				class="close" 
 				@click.stop="closeModal"
 			>
 				X
 			</span>
+
 			<div class="modal-content" @click.stop>
-				<!-- Arrows at the top-right -->
 				<span class="arrow left" @click="prevImage">&#10094;</span>
 				<span class="arrow right" @click="nextImage">&#10095;</span>
 				
 				<img :src="modalImageUrl" />
-
-				<!-- Thumbnails at the bottom -->
-				<!-- <div class="thumbnails">
-					<div 
-						v-for="(image, index) in visibleThumbnails" 
-						:key="index" 
-						:class="['thumbnail', { active: index + startIndex === currentImageIndex }]" 
-						@click="openModal(index + startIndex)"
-					>
-						<img :src="image.url" :alt="image.name" />
-					</div>
-				</div> -->
 			</div>
 		</div>
 	</div>
@@ -110,30 +102,6 @@
 			}
 		},
 		computed: {
-			visibleThumbnails() {
-				if (this.images.length <= 5) {
-					// Show all images if 5 or fewer
-					return this.images;
-				}
-
-				let startIndex = this.currentImageIndex - 2;
-				let endIndex = this.currentImageIndex + 3;
-
-				// Wrap around if indices go out of bounds
-				if (startIndex < 0) {
-					startIndex = this.images.length + startIndex;
-				}
-				if (endIndex > this.images.length) {
-					endIndex = endIndex - this.images.length;
-				}
-
-				// Create visible thumbnails array
-				if (startIndex < endIndex) {
-					return this.images.slice(startIndex, endIndex);
-				} else {
-					return [...this.images.slice(startIndex), ...this.images.slice(0, endIndex)];
-				}
-			},
 			startIndex() {
 				// Get the starting index for the visible thumbnails
 				return (this.currentImageIndex - 2 + this.images.length) % this.images.length;
@@ -166,159 +134,117 @@
 		padding: 2rem;
 		text-align: center;
 
-	a {
-		padding: 1rem 2rem;
-		background-color: #2758bd;
-		color: #fff;
-		border: none;
-		border-radius: .5rem;
-		cursor: pointer;
-		transition: background-color 0.3s;
-		width: 100%;
-
-		&:hover {
+		a {
+			padding: 1rem 2rem;
 			background-color: #2758bd;
+			color: #fff;
+			border: none;
+			border-radius: .5rem;
+			cursor: pointer;
+			transition: background-color 0.3s;
+			width: 100%;
+
+			&:hover {
+				background-color: #2758bd;
+			}
 		}
 	}
-  }
 
 	.gallery {
 		display: grid;
 		grid-template-columns: repeat(2, 1fr);
-		gap: 0.5rem; /* Adjust spacing between images */
+		gap: .5rem; 
 		padding: 1rem;
 		width: 100%;
 
-		/* Alternate rows */
 		.image-container {
+			aspect-ratio: 3 / 2;
+			overflow: hidden;
 			position: relative;
 			width: 100%;
-			overflow: hidden; /* Ensures the image doesn't spill out */
-			aspect-ratio: 3 / 2;
 
-				img {
-					width: 100%;
-					height: 100%;
-					object-fit: cover;
-				}
-			
+			img {
+				height: 100%;
+				object-fit: cover;
+				width: 100%;
+			}
 		}
 	}
 
-
-  .modal {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: fixed;
-    z-index: 999;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100dvh;
-    // overflow: auto;
-    background-color: $bg-secondary;
-
-    .close {
-		background: white;
-		border-radius: 100px;
-		height: 2rem;
-		width: 2rem;
-      position: absolute;
-      top: 1rem;
-      right: 1rem;
-      color: black;
-      font-size: 1.5rem;
-      cursor: pointer;
-	  z-index: 9999;
-	  display: flex;
-	  justify-content: center;
-	  align-items: center;
-    }
-
-	.modal-content {
-		display: flex;
+	.modal {
 		align-items: center;
+		background-color: $bg-secondary;
+		display: flex;
+		height: 100dvh;
 		justify-content: center;
-		position: relative;
-		background-color: transparent;
-		padding: 2rem 1rem;
-		border-radius: 8px;
-		text-align: center;
-		height: 80dvh;
+		left: 0;
+		position: fixed;
+		top: 0;
+		width: 100%;
+		z-index: 999;
 
-		/* Main modal image */
-		img {
-			border-radius: 8px;
-			max-width: 100vw;
-			object-fit: contain;
-			width: 100%;
-		}
-
-		/* Arrows at the top-right */
-		.arrow {
-			background-color: #ffffffdd;
-			position: absolute;
-			bottom: calc(50% - 2rem);
-			font-size: 2rem;
-			cursor: pointer;
-			user-select: none;
-			color: $color-2;
-			border: 1px solid white;
-			border-radius: 8px;
-			padding: .5rem;
-			height: 4rem;
-			display: flex;
+		.close {
 			align-items: center;
-			justify-content: center;
-
-			&.left {
-				left: 1rem;
-			}
-
-			&.right {
-				right: 1rem;
-			}
-		}
-
-		/* Thumbnails at the bottom */
-		.thumbnails {
-			position: absolute;
-			bottom: 4rem; /* Distance from bottom of modal */
-			left: 0;
-			width: 100%;
+			background: white;
+			border-radius: 100px;
+			color: black;
+			cursor: pointer;
 			display: flex;
+			font-size: 1.5rem;
+			height: 2rem;
 			justify-content: center;
-			gap: 10px;
-			max-height: 30vh;
+			position: absolute;
+			right: 1rem;
+			top: 1rem;
+			width: 2rem;
+			z-index: 9999;
+		}
 
-			.thumbnail {
-				width: calc(20% - 5px);
-				height: 6rem;
+		.modal-content {
+			align-items: center;
+			background-color: transparent;
+			border-radius: .5rem;
+			display: flex;
+			height: 80dvh;
+			justify-content: center;
+			padding: 2rem 1rem;
+			position: relative;
+			text-align: center;
+
+			img {
+				border-radius: .5rem;
+				max-width: 100vw;
+				object-fit: contain;
+				width: 100%;
+			}
+
+			.arrow {
+				align-items: center;
+				background-color: #ffffffdd;
+				border: 1px solid white;
+				border-radius: .5rem;
+				bottom: calc(50% - 2rem);
+				color: $color-2;
 				cursor: pointer;
-				opacity: 0.6;
+				display: flex;
+				font-size: 2rem;
+				height: 4rem;
+				justify-content: center;
+				padding: .5rem;
+				position: absolute;
+				user-select: none;
 
-				img {
-					// width: 100%;
-					height: 100%;
-					object-fit: cover;
-					border-radius: 4px;
-					border-bottom: 4px solid transparent; /* Default border */
-					margin-top: 0;
+				&.left {
+					left: 1rem;
 				}
 
-				&.active {
-					opacity: 1;
-
-					img {
-						border-bottom: 4px solid $color-2; /* Highlight active thumbnail */
-					}
+				&.right {
+					right: 1rem;
 				}
 			}
 		}
-	}
 
-  }
+	}
 }
 
 </style>
