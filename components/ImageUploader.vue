@@ -8,7 +8,7 @@
 
 			<p>or Drag & Drop your images here</p>
 
-            <p class="small">Sadly we can't accept videos uploaded</p>
+            <p class="small">Sadly we can't accept videos</p>
 		</label>
 
 		<input
@@ -50,23 +50,6 @@
 				Gallery
 			</nuxt-link>
 		</div>
-
-		<!-- <div v-if="imageUrls.length > 0 && !isUploading">
-			<p>Uploaded Images:</p>
-
-			<div class="uploaded-images">
-				<div 
-					v-for="(imageUrl, index) in imageUrls" 
-					:key="index" 
-					class="uploaded-image"
-				>
-					<img 
-						:src="imageUrl" 
-						:alt="'Uploaded Image ' + (index + 1)" 
-					/>
-				</div>
-			</div>
-		</div> -->
 	</div>
 </template>
 

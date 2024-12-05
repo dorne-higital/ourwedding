@@ -123,9 +123,9 @@
 @import "~/assets/css/main.scss";
 
 .image-gallery {
-  z-index: 99;
+	z-index: 99;
 
-  .gallery-message {
+	.gallery-message {
 		display: flex;
 		align-items: center;
 		justify-content: center;
