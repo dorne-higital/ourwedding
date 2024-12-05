@@ -28,14 +28,19 @@
 			</div>
 		</div>
 
+		<span
+			class="close" 
+			@click.stop="closeModal"
+		>
+			&times;
+		</span>
 		<div v-if="isModalOpen" class="modal" @click="closeModal">
-			<span 
+			<span
 				class="close" 
 				@click.stop="closeModal"
 			>
 				&times;
 			</span>
-
 			<div class="modal-content" @click.stop>
 				<!-- Arrows at the top-right -->
 				<span class="arrow left" @click="prevImage">&#10094;</span>
