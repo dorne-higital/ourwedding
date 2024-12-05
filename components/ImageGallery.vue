@@ -216,7 +216,7 @@
     top: 0;
     width: 100%;
     height: 100dvh;
-    overflow: auto;
+    // overflow: auto;
     background-color: $bg-secondary;
 
     .close {
