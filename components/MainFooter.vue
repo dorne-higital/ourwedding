@@ -59,6 +59,7 @@
                     <li>
 						<p>The date to RSVP has now passed.</p>
                     </li>
+                    <br />
 					<li>
 						<p>If you have an invite and would like to attend, please speak one of us, and we will try to accomodate you.</p>
 					</li>

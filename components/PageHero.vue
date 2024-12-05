@@ -52,7 +52,7 @@
     width: 100%;
 
     @media only screen and (max-width: 600px) {
-        height: 50vh;
+        height: 55vh;
     }
 
     .hero-banner {
@@ -103,7 +103,7 @@
             flex-direction: column;
             justify-content: center;
             left: 50%;
-            padding: 2rem;
+            padding: 4rem 1rem;
             position: absolute;
             text-align: center;
             top: 50%;
