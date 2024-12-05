@@ -49,23 +49,23 @@ h1 {
 }
 @media (max-width: 600px) {
   h1 {
-    font-size: 3.75rem;
+    font-size: 4.75rem;
   }
 }
 
 h2 {
   font-family: "Passions Conflict", cursive;
-  font-size: 3.75rem;
+  font-size: 4.75rem;
 }
 @media (max-width: 600px) {
   h2 {
-    font-size: 1.85rem;
+    font-size: 2.85rem;
   }
 }
 
 h3 {
   font-family: "Passions Conflict", cursive;
-  font-size: 1.85rem;
+  font-size: 2.85rem;
 }
 @media (max-width: 600px) {
   h3 {

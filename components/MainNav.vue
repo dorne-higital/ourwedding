@@ -126,6 +126,9 @@
                 color: $secondary-color;
                 line-height: 1.5rem;
 
+                h2 {
+                    margin-bottom: 0;
+                }
 
                 @media only screen and (max-width: 600px) {
                     line-height: 1.2rem;
@@ -306,7 +309,7 @@
                 a.nav_logo,
                 .quick_contact_section,
                 .about_section_text {
-                    padding: 0 1.5rem;
+                    padding: 1.5rem;
                 }
 
             }
