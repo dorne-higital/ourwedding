@@ -43,7 +43,7 @@
 				<img :src="modalImageUrl" />
 
 				<!-- Thumbnails at the bottom -->
-				<div class="thumbnails">
+				<!-- <div class="thumbnails">
 					<div 
 						v-for="(image, index) in visibleThumbnails" 
 						:key="index" 
@@ -52,7 +52,7 @@
 					>
 						<img :src="image.url" :alt="image.name" />
 					</div>
-				</div>
+				</div> -->
 			</div>
 		</div>
 	</div>
@@ -230,6 +230,9 @@
     }
 
 	.modal-content {
+		display: flex;
+		align-items: center;
+		justify-content: center;
 		position: relative;
 		background-color: transparent;
 		padding: 2rem 1rem;
@@ -240,16 +243,14 @@
 		/* Main modal image */
 		img {
 			border-radius: 8px;
-			max-width: fit-content;
-			max-height: 60vh;
+			max-width: 100vw;
 			object-fit: contain;
-			margin: 3rem auto 0;
 			width: 100%;
 		}
 
 		/* Arrows at the top-right */
 		.arrow {
-			background-color: #ffffff4d;
+			background-color: #ffffff94;
 			position: absolute;
 			bottom: 50%;
 			font-size: 2rem;
