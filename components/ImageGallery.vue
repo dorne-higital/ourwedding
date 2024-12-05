@@ -33,7 +33,7 @@
 				class="close" 
 				@click.stop="closeModal"
 			>
-				&times;
+				X
 			</span>
 			<div class="modal-content" @click.stop>
 				<!-- Arrows at the top-right -->
@@ -220,14 +220,20 @@
     background-color: $bg-secondary;
 
     .close {
+		background: white;
+		border-radius: 100px;
+		height: 2rem;
+		width: 2rem;
       position: absolute;
-      top: 20px;
-      right: 35px;
-      color: #fff;
-      font-size: 40px;
-      font-weight: bold;
+      top: 1rem;
+      right: 1rem;
+      color: black;
+      font-size: 1.5rem;
       cursor: pointer;
 	  z-index: 9999;
+	  display: flex;
+	  justify-content: center;
+	  align-items: center;
     }
 
 	.modal-content {
@@ -251,9 +257,9 @@
 
 		/* Arrows at the top-right */
 		.arrow {
-			background-color: #ffffff94;
+			background-color: #ffffffdd;
 			position: absolute;
-			bottom: 50%;
+			bottom: calc(50% - 2rem);
 			font-size: 2rem;
 			cursor: pointer;
 			user-select: none;
@@ -261,6 +267,10 @@
 			border: 1px solid white;
 			border-radius: 8px;
 			padding: .5rem;
+			height: 4rem;
+			display: flex;
+			align-items: center;
+			justify-content: center;
 
 			&.left {
 				left: 1rem;
