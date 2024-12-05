@@ -28,12 +28,6 @@
 			</div>
 		</div>
 
-		<span
-			class="close" 
-			@click.stop="closeModal"
-		>
-			&times;
-		</span>
 		<div v-if="isModalOpen" class="modal" @click="closeModal">
 			<span
 				class="close" 
@@ -247,7 +241,7 @@
 		img {
 			border-radius: 8px;
 			max-width: fit-content;
-			max-height: 60dvh;
+			max-height: 60vh;
 			object-fit: contain;
 			margin: 3rem auto 0;
 			width: 100%;
@@ -255,22 +249,23 @@
 
 		/* Arrows at the top-right */
 		.arrow {
+			background-color: #ffffff4d;
 			position: absolute;
-			bottom: 0;
+			bottom: 50%;
 			font-size: 2rem;
 			cursor: pointer;
 			user-select: none;
-			color: white;
-			width: calc(50% - 1.5rem);
+			color: $color-2;
 			border: 1px solid white;
 			border-radius: 8px;
+			padding: .5rem;
 
 			&.left {
-				left: 20px;
+				left: 1rem;
 			}
 
 			&.right {
-				right: 20px;
+				right: 1rem;
 			}
 		}
 
@@ -283,6 +278,7 @@
 			display: flex;
 			justify-content: center;
 			gap: 10px;
+			max-height: 30vh;
 
 			.thumbnail {
 				width: calc(20% - 5px);
