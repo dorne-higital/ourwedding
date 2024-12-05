@@ -36,7 +36,7 @@
                         <a href="/">
                             Home
 
-                            <span>></span>
+                            <span>&#10095;</span>
                         </a>
                     </li>
 
@@ -44,7 +44,7 @@
                         <a href="/about">
                             Our story
 
-                            <span>></span>
+                            <span>&#10095;</span>
                         </a>
                     </li>
 
@@ -52,7 +52,7 @@
                         <a href="/upload">
                             Upload images
 
-                            <span>></span>
+                            <span>&#10095;</span>
                         </a>
                     </li>
 
@@ -60,7 +60,7 @@
                         <a href="/gallery">
                             Gallery
 
-                            <span>></span>
+                            <span>&#10095;</span>
                         </a>
                     </li>
 
@@ -68,7 +68,7 @@
                         <a href="/rsvp">
                             RSVP
 
-                            <span>></span>
+                            <span>&#10095;</span>
                         </a>
                     </li>
                 </div>
