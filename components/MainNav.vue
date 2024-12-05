@@ -9,6 +9,7 @@
             </div>
             <ul class="desktop_nav">
                 <li><a href="/">Home</a></li>
+                <li><a href="/about">Our story</a></li>
                 <li><a href="/upload">Upload</a></li>
                 <li><a href="/gallery">Gallery</a></li>
                 <li><a href="/rsvp">RSVP</a></li>
@@ -34,6 +35,14 @@
                     <li>
                         <a href="/">
                             Home
+
+                            <span>></span>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="/about">
+                            Our story
 
                             <span>></span>
                         </a>
