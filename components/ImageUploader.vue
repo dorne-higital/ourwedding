@@ -7,6 +7,8 @@
 			<h2>Click to Upload</h2>
 
 			<p>or Drag & Drop your images here</p>
+
+            <p class="small">Sadly we can't accept videos uploaded</p>
 		</label>
 
 		<input
@@ -232,6 +234,10 @@
 			p {
 				color: $primary-color;
 			}
+
+            .small {
+                font-size: .7rem;
+            }
 		}
 
 		.uploading-message {
