@@ -29,7 +29,12 @@
 		</div>
 
 		<div v-if="isModalOpen" class="modal" @click="closeModal">
-			<span class="close">&times;</span>
+			<span 
+				class="close" 
+				@click.stop="closeModal"
+			>
+				&times;
+			</span>
 
 			<div class="modal-content" @click.stop>
 				<!-- Arrows at the top-right -->
@@ -211,7 +216,7 @@
     left: 0;
     top: 0;
     width: 100%;
-    height: 100%;
+    height: 100dvh;
     overflow: auto;
     background-color: $bg-secondary;
 
