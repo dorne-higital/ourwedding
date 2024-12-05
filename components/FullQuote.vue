@@ -134,6 +134,7 @@
 		h2 {
 			color: $color-4;
 			font-family: $secondary-font;
+            font-size: 2.5rem;
 			font-weight: 900;
 			line-height: 3rem;
 			text-align: justify;
