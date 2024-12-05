@@ -211,7 +211,7 @@
     justify-content: center;
     align-items: center;
     position: fixed;
-    z-index: 9999;
+    z-index: 999;
     left: 0;
     top: 0;
     width: 100%;
@@ -227,6 +227,7 @@
       font-size: 40px;
       font-weight: bold;
       cursor: pointer;
+	  z-index: 9999;
     }
 
 	.modal-content {
@@ -238,7 +239,7 @@
 		padding: 2rem 1rem;
 		border-radius: 8px;
 		text-align: center;
-		height: 90dvh;
+		height: 80dvh;
 
 		/* Main modal image */
 		img {
