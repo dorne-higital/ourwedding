@@ -39,7 +39,7 @@
 					},
 					{
 						"question": "When should I arrive?",
-						"answer": "We recommend arriving 15-20 minutes before the start of the ceremony. If late, we kindly ask you wait in the music room or bar area to minimise any disruption to the ceremony. If arriving for the evening, please arrive promptly for 18:00.",
+						"answer": "We recommend arriving 15-20 minutes before the start of the ceremony. If late, we kindly ask you wait in the music room or bar area to minimise any disruption to the ceremony. If arriving for the evening, please arrive promptly for 18:30.",
 					},
 					{
 						"question": "Do you have a registry? Can I bring a gift?",
